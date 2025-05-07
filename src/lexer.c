@@ -15,6 +15,36 @@ Token *get_next_token(const char *source)
     }
     while (input[position] != '\0')
     {
+        // Skip whitespace
+        if (input[position] == ' ' || input[position] == '\t' || input[position] == '\n' || input[position] == '\r')
+        {
+            position++;
+            continue;
+        }
+        // Skip single-line comments (// ...)
+        if (input[position] == '/' && input[position + 1] == '/')
+        {
+            position += 2;
+            while (input[position] != '\0' && input[position] != '\n')
+            {
+                position++;
+            }
+            continue;
+        }
+        // Skip multi-line comments (/* ... */)
+        if (input[position] == '/' && input[position + 1] == '*')
+        {
+            position += 2;
+            while (input[position] != '\0' && !(input[position] == '*' && input[position + 1] == '/'))
+            {
+                position++;
+            }
+            if (input[position] == '*' && input[position + 1] == '/')
+            {
+                position += 2;
+            }
+            continue;
+        }
         if (input[position] == 's' && strncmp(&input[position], "show", 4) == 0)
         {
             position += 4;
