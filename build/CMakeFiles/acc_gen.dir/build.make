@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/circuit0/Workshop/learnig/my-new-lang-1
+CMAKE_SOURCE_DIR = /home/circuit0/Workshop/learnig/wisp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/circuit0/Workshop/learnig/my-new-lang-1/build
+CMAKE_BINARY_DIR = /home/circuit0/Workshop/learnig/wisp/build
 
 # Utility rule file for acc_gen.
 
@@ -78,6 +78,6 @@ CMakeFiles/acc_gen.dir/clean:
 .PHONY : CMakeFiles/acc_gen.dir/clean
 
 CMakeFiles/acc_gen.dir/depend:
-	cd /home/circuit0/Workshop/learnig/my-new-lang-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/circuit0/Workshop/learnig/my-new-lang-1 /home/circuit0/Workshop/learnig/my-new-lang-1 /home/circuit0/Workshop/learnig/my-new-lang-1/build /home/circuit0/Workshop/learnig/my-new-lang-1/build /home/circuit0/Workshop/learnig/my-new-lang-1/build/CMakeFiles/acc_gen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/circuit0/Workshop/learnig/wisp /home/circuit0/Workshop/learnig/wisp /home/circuit0/Workshop/learnig/wisp/build /home/circuit0/Workshop/learnig/wisp/build /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles/acc_gen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/acc_gen.dir/depend
 

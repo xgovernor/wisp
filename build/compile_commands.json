@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/circuit0/Workshop/learnig/wisp/build",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -o CMakeFiles/wisp.dir/src/codegen.c.o -c /home/circuit0/Workshop/learnig/wisp/src/codegen.c",
+  "file": "/home/circuit0/Workshop/learnig/wisp/src/codegen.c",
+  "output": "CMakeFiles/wisp.dir/src/codegen.c.o"
+},
+{
+  "directory": "/home/circuit0/Workshop/learnig/wisp/build",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -o CMakeFiles/wisp.dir/src/lexer.c.o -c /home/circuit0/Workshop/learnig/wisp/src/lexer.c",
+  "file": "/home/circuit0/Workshop/learnig/wisp/src/lexer.c",
+  "output": "CMakeFiles/wisp.dir/src/lexer.c.o"
+},
+{
+  "directory": "/home/circuit0/Workshop/learnig/wisp/build",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -o CMakeFiles/wisp.dir/src/main.c.o -c /home/circuit0/Workshop/learnig/wisp/src/main.c",
+  "file": "/home/circuit0/Workshop/learnig/wisp/src/main.c",
+  "output": "CMakeFiles/wisp.dir/src/main.c.o"
+},
+{
+  "directory": "/home/circuit0/Workshop/learnig/wisp/build",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -o CMakeFiles/wisp.dir/src/parser.c.o -c /home/circuit0/Workshop/learnig/wisp/src/parser.c",
+  "file": "/home/circuit0/Workshop/learnig/wisp/src/parser.c",
+  "output": "CMakeFiles/wisp.dir/src/parser.c.o"
+}
+]

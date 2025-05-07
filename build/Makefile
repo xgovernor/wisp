@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/circuit0/Workshop/learnig/my-new-lang-1
+CMAKE_SOURCE_DIR = /home/circuit0/Workshop/learnig/wisp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/circuit0/Workshop/learnig/my-new-lang-1/build
+CMAKE_BINARY_DIR = /home/circuit0/Workshop/learnig/wisp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/my-new-lang-1/build/CMakeFiles /home/circuit0/Workshop/learnig/my-new-lang-1/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles /home/circuit0/Workshop/learnig/wisp/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/my-new-lang-1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_new_lang
+# Target rules for targets named wisp
 
 # Build rule for target.
-my_new_lang: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_new_lang
-.PHONY : my_new_lang
+wisp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wisp
+.PHONY : wisp
 
 # fast build rule for target.
-my_new_lang/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/build
-.PHONY : my_new_lang/fast
+wisp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/build
+.PHONY : wisp/fast
 
 #=============================================================================
 # Target rules for targets named intrinsics_gen
@@ -212,7 +212,7 @@ src/codegen.o: src/codegen.c.o
 
 # target to build an object file
 src/codegen.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/codegen.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/codegen.c.o
 .PHONY : src/codegen.c.o
 
 src/codegen.i: src/codegen.c.i
@@ -220,7 +220,7 @@ src/codegen.i: src/codegen.c.i
 
 # target to preprocess a source file
 src/codegen.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/codegen.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/codegen.c.i
 .PHONY : src/codegen.c.i
 
 src/codegen.s: src/codegen.c.s
@@ -228,7 +228,7 @@ src/codegen.s: src/codegen.c.s
 
 # target to generate assembly for a file
 src/codegen.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/codegen.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/codegen.c.s
 .PHONY : src/codegen.c.s
 
 src/lexer.o: src/lexer.c.o
@@ -236,7 +236,7 @@ src/lexer.o: src/lexer.c.o
 
 # target to build an object file
 src/lexer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/lexer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/lexer.c.o
 .PHONY : src/lexer.c.o
 
 src/lexer.i: src/lexer.c.i
@@ -244,7 +244,7 @@ src/lexer.i: src/lexer.c.i
 
 # target to preprocess a source file
 src/lexer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/lexer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/lexer.c.i
 .PHONY : src/lexer.c.i
 
 src/lexer.s: src/lexer.c.s
@@ -252,7 +252,7 @@ src/lexer.s: src/lexer.c.s
 
 # target to generate assembly for a file
 src/lexer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/lexer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/lexer.c.s
 .PHONY : src/lexer.c.s
 
 src/main.o: src/main.c.o
@@ -260,7 +260,7 @@ src/main.o: src/main.c.o
 
 # target to build an object file
 src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/main.c.o
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -268,7 +268,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -276,7 +276,7 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/main.c.s
 .PHONY : src/main.c.s
 
 src/parser.o: src/parser.c.o
@@ -284,7 +284,7 @@ src/parser.o: src/parser.c.o
 
 # target to build an object file
 src/parser.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/parser.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/parser.c.o
 .PHONY : src/parser.c.o
 
 src/parser.i: src/parser.c.i
@@ -292,7 +292,7 @@ src/parser.i: src/parser.c.i
 
 # target to preprocess a source file
 src/parser.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/parser.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/parser.c.i
 .PHONY : src/parser.c.i
 
 src/parser.s: src/parser.c.s
@@ -300,7 +300,7 @@ src/parser.s: src/parser.c.s
 
 # target to generate assembly for a file
 src/parser.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_new_lang.dir/build.make CMakeFiles/my_new_lang.dir/src/parser.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/parser.c.s
 .PHONY : src/parser.c.s
 
 # Help Target
@@ -317,7 +317,7 @@ help:
 	@echo "... acc_gen"
 	@echo "... intrinsics_gen"
 	@echo "... omp_gen"
-	@echo "... my_new_lang"
+	@echo "... wisp"
 	@echo "... src/codegen.o"
 	@echo "... src/codegen.i"
 	@echo "... src/codegen.s"

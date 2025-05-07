@@ -100,7 +100,7 @@ char *interpolate(const char *template)
 int main(int argc, char **argv)
 {
     // Language info
-    const char *LANG_NAME = "MyNewLang";
+    const char *LANG_NAME = "Wisp";
     const char *LANG_AUTHOR = "Abu Taher Muhammad";
     const char *LANG_VERSION = "0.1.0";
     int show_stats = 0;
