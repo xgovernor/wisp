@@ -36,7 +36,7 @@ void add_variable(const char *name, const char *type, const char *value, int is_
     {
         if (v->is_constant)
         {
-            fprintf(stderr, "Cannot reassign to constant variable: %s\n", name);
+            fprintf(stderr, "\033[31mCannot reassign to constant variable: %s\033[0m\n", name);
             return;
         }
         strncpy(v->type, type, MAX_TYPE_LEN - 1);
@@ -186,7 +186,7 @@ int main(int argc, char **argv)
             }
             else
             {
-                fprintf(stderr, "Syntax error: expected string after show\n");
+                fprintf(stderr, "\033[31mSyntax error: expected string after show\033[0m\n");
                 if (string_token)
                     free_token(string_token);
             }
