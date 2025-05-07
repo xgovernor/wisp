@@ -1,3 +1,6 @@
+#define _POSIX_C_SOURCE 200809L
+#include <time.h>
+#include <sys/resource.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -96,14 +99,51 @@ char *interpolate(const char *template)
 
 int main(int argc, char **argv)
 {
-    if (argc < 2)
+    // Language info
+    const char *LANG_NAME = "MyNewLang";
+    const char *LANG_AUTHOR = "Abu Taher Muhammad";
+    const char *LANG_VERSION = "0.1.0";
+    int show_stats = 0;
+    int show_info = 0;
+    char *script_file = NULL;
+
+    // Parse flags and find script filename (allow flags in any order)
+    for (int i = 1; i < argc; ++i)
     {
-        fprintf(stderr, "Usage: %s <source_file>\n", argv[0]);
+        if (strcmp(argv[i], "--info") == 0)
+            show_info = 1;
+        else if (strcmp(argv[i], "--stats") == 0)
+            show_stats = 1;
+        else if (!script_file && argv[i][0] != '-')
+            script_file = argv[i];
+    }
+
+    if (show_info)
+    {
+        printf("Language: %s\nAuthor: %s\nVersion: %s\n", LANG_NAME, LANG_AUTHOR, LANG_VERSION);
+        // If only --info is given, exit. If script is also given, continue to run script.
+        if (!script_file)
+            return 0;
+    }
+
+    printf("\033[36m%s v%s by %s\033[0m\n", LANG_NAME, LANG_VERSION, LANG_AUTHOR);
+
+    struct rusage usage_start, usage_end;
+    struct timespec t_start, t_end;
+    if (show_stats)
+    {
+        getrusage(RUSAGE_SELF, &usage_start);
+        clock_gettime(CLOCK_MONOTONIC, &t_start);
+    }
+
+    if (!script_file)
+    {
+        fprintf(stderr, "Usage: %s [--info] [--stats] <source_file>\n", argv[0]);
         return 1;
     }
 
     // Read the source file
-    FILE *file = fopen(argv[1], "r");
+    FILE *file = fopen(script_file, "r");
     if (!file)
     {
         perror("Failed to open source file");
@@ -197,5 +237,14 @@ int main(int argc, char **argv)
     if (token)
         free_token(token);
     free(source);
+
+    if (show_stats)
+    {
+        getrusage(RUSAGE_SELF, &usage_end);
+        clock_gettime(CLOCK_MONOTONIC, &t_end);
+        double elapsed = (t_end.tv_sec - t_start.tv_sec) + (t_end.tv_nsec - t_start.tv_nsec) / 1e9;
+        long mem_kb = usage_end.ru_maxrss;
+        printf("\033[33m[Stats] Time: %.6f sec | Max Memory: %ld KB\033[0m\n", elapsed, mem_kb);
+    }
     return 0;
 }
