@@ -1,0 +1,5 @@
+<map id="src/codegen/codegen.h" name="src/codegen/codegen.h">
+<area shape="rect" id="Node000001" title="Code generation interface for the Wisp language." alt="" coords="5,5,176,31"/>
+<area shape="rect" id="Node000002" href="$codegen_8c.html" title="Implements code generation for the Wisp language." alt="" coords="5,79,176,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,44,93,79,88,79,88,44"/>
+</map>

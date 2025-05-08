@@ -1,4 +1,11 @@
 #define _POSIX_C_SOURCE 200809L
+/**
+ * @file main.c
+ * @brief Entry point for the Wisp interpreter. Handles CLI, file loading, and top-level execution loop.
+ *
+ * This file parses command-line arguments, loads the source file, and drives the main
+ * interpretation loop using the modular lexer, symbol table, and utility functions.
+ */
 #include <time.h>
 #include <sys/resource.h>
 #include <stdio.h>
@@ -9,6 +16,15 @@
 #include "modules/symbol_table.h"
 #include "utils/utils.h"
 
+/**
+ * @brief Main entry point for the Wisp interpreter.
+ *
+ * Handles CLI flags, loads the source file, and interprets the program.
+ *
+ * @param argc Argument count
+ * @param argv Argument vector
+ * @return 0 on success, nonzero on error
+ */
 int main(int argc, char **argv)
 {
     // Language info

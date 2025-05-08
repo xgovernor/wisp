@@ -1,0 +1,36 @@
+# Doxyfile 1.9.8 (minimal, for Wisp project)
+
+# See https://www.doxygen.nl/manual/config.html for all options
+
+# Project related
+
+PROJECT_NAME = "Wisp Interpreter"
+PROJECT_BRIEF = "A modular, maintainable interpreter for the Wisp language."
+OUTPUT_DIRECTORY = docs/doxygen
+CREATE_SUBDIRS = NO
+
+# Input
+
+INPUT = src include
+FILE_PATTERNS = _.c _.h
+RECURSIVE = YES
+
+# Output
+
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+
+# Extraction
+
+EXTRACT_ALL = YES
+EXTRACT_PRIVATE = YES
+EXTRACT_STATIC = YES
+
+# Warnings
+
+WARN_IF_UNDOCUMENTED = YES
+
+# Misc
+
+QUIET = NO
+GENERATE_TREEVIEW = YES

@@ -1,0 +1,9 @@
+<map id="src/modules/symbol_table.h" name="src/modules/symbol_table.h">
+<area shape="rect" id="Node000001" title="Symbol table management for Wisp interpreter." alt="" coords="119,5,272,45"/>
+<area shape="rect" id="Node000002" href="$main_8c.html" title="Entry point for the Wisp interpreter. Handles CLI, file loading, and top&#45;level execution loop." alt="" coords="5,101,95,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,55,71,103,68,98,150,50"/>
+<area shape="rect" id="Node000003" href="$symbol__table_8c.html" title=" " alt="" coords="119,93,272,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,59,198,93,193,93,193,59"/>
+<area shape="rect" id="Node000004" href="$utils_8c.html" title=" " alt="" coords="296,101,412,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="243,49,334,98,332,103,241,54"/>
+</map>
