@@ -5,6 +5,12 @@
 Variable symbol_table[MAX_VARIABLES];
 int symbol_count = 0;
 
+/**
+ * @brief Finds a variable by name in the symbol table.
+ *
+ * @param name The variable name to search for.
+ * @return Pointer to the Variable if found, NULL otherwise.
+ */
 Variable *find_variable(const char *name) {
     for (int i = 0; i < symbol_count; ++i) {
         if (strcmp(symbol_table[i].name, name) == 0)
@@ -13,6 +19,17 @@ Variable *find_variable(const char *name) {
     return NULL;
 }
 
+/**
+ * @brief Adds a new variable or updates an existing one in the symbol table.
+ *
+ * If the variable already exists and is not constant, updates its value and type.
+ * If it is constant, prints an error and does not update.
+ *
+ * @param name Variable name
+ * @param type Variable type
+ * @param value Variable value (as string)
+ * @param is_constant 1 if constant, 0 if mutable
+ */
 void add_variable(const char *name, const char *type, const char *value, int is_constant) {
     Variable *v = find_variable(name);
     if (v) {

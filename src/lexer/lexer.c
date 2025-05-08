@@ -6,6 +6,14 @@
 static const char *input = NULL;
 static size_t position = 0;
 
+/**
+ * @brief Lexical analyzer: returns the next token from the source string.
+ *
+ * If a new source is provided, resets the lexer state to the beginning of that source.
+ *
+ * @param source The source string to tokenize (or NULL to continue previous).
+ * @return Pointer to a dynamically allocated Token. Caller must free with free_token().
+ */
 Token *get_next_token(const char *source)
 {
     if (source != NULL)
@@ -229,6 +237,10 @@ Token *get_next_token(const char *source)
     return token;
 }
 
+/**
+ * @brief Frees a Token and its value.
+ * @param token Pointer to the Token to free.
+ */
 void free_token(Token *token)
 {
     if (token)

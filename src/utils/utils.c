@@ -2,6 +2,14 @@
 #include <string.h>
 #include "../modules/symbol_table.h"
 
+/**
+ * @brief Interpolates variables in a template string using the symbol table.
+ *
+ * Replaces occurrences of {var} in the template with the value of var from the symbol table.
+ *
+ * @param template The input template string.
+ * @return Pointer to a static buffer containing the interpolated string.
+ */
 char *interpolate(const char *template)
 {
     static char buffer[512];
