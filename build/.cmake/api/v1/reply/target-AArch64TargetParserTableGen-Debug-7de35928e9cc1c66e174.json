@@ -20,7 +20,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 29,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
@@ -30,13 +30,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 387,
+				"line" : 390,
 				"parent" : 2
 			}
 		]
 	},
-	"id" : "ARMTargetParserTableGen::@6890427a1f51a3e7e1df",
-	"name" : "ARMTargetParserTableGen",
+	"id" : "AArch64TargetParserTableGen::@6890427a1f51a3e7e1df",
+	"name" : "AArch64TargetParserTableGen",
 	"paths" : 
 	{
 		"build" : ".",

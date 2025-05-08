@@ -154,6 +154,30 @@ import.c.s:
 	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/import.c.s
 .PHONY : import.c.s
 
+symbol_table.o: symbol_table.c.o
+.PHONY : symbol_table.o
+
+# target to build an object file
+symbol_table.c.o:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/symbol_table.c.o
+.PHONY : symbol_table.c.o
+
+symbol_table.i: symbol_table.c.i
+.PHONY : symbol_table.i
+
+# target to preprocess a source file
+symbol_table.c.i:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/symbol_table.c.i
+.PHONY : symbol_table.c.i
+
+symbol_table.s: symbol_table.c.s
+.PHONY : symbol_table.s
+
+# target to generate assembly for a file
+symbol_table.c.s:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/symbol_table.c.s
+.PHONY : symbol_table.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -166,6 +190,9 @@ help:
 	@echo "... import.o"
 	@echo "... import.i"
 	@echo "... import.s"
+	@echo "... symbol_table.o"
+	@echo "... symbol_table.i"
+	@echo "... symbol_table.s"
 .PHONY : help
 
 

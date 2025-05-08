@@ -44,6 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/circuit0/Workshop/learnig/wisp/build/src/utils/cmake_install.cmake")
   include("/home/circuit0/Workshop/learnig/wisp/build/src/lexer/cmake_install.cmake")
   include("/home/circuit0/Workshop/learnig/wisp/build/src/parser/cmake_install.cmake")
   include("/home/circuit0/Workshop/learnig/wisp/build/src/codegen/cmake_install.cmake")

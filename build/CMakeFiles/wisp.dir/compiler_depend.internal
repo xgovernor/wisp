@@ -4,6 +4,8 @@
 CMakeFiles/wisp.dir/src/main.c.o
  /home/circuit0/Workshop/learnig/wisp/src/main.c
  /home/circuit0/Workshop/learnig/wisp/src/include/lexer.h
+ /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h
+ /home/circuit0/Workshop/learnig/wisp/src/utils/utils.h
  /usr/include/alloca.h
  /usr/include/endian.h
  /usr/include/features-time64.h

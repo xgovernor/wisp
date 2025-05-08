@@ -16,6 +16,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/circuit0/Workshop/learnig/wisp/src/modules/CMakeLists.txt"
   "/home/circuit0/Workshop/learnig/wisp/src/parser/CMakeLists.txt"
   "/home/circuit0/Workshop/learnig/wisp/src/runtime/CMakeLists.txt"
+  "/home/circuit0/Workshop/learnig/wisp/src/utils/CMakeLists.txt"
   "/usr/lib/llvm-19/cmake/FindFFI.cmake"
   "/usr/lib/llvm-19/cmake/FindLibEdit.cmake"
   "/usr/lib/llvm-19/cmake/Findzstd.cmake"
@@ -67,6 +68,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/utils/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/lexer/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/parser/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/codegen/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -83,6 +85,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ARMTargetParserTableGen.dir/DependInfo.cmake"
   "CMakeFiles/AArch64TargetParserTableGen.dir/DependInfo.cmake"
   "CMakeFiles/RISCVTargetParserTableGen.dir/DependInfo.cmake"
+  "src/utils/CMakeFiles/utils.dir/DependInfo.cmake"
   "src/lexer/CMakeFiles/lexer.dir/DependInfo.cmake"
   "src/parser/CMakeFiles/parser.dir/DependInfo.cmake"
   "src/codegen/CMakeFiles/codegen.dir/DependInfo.cmake"

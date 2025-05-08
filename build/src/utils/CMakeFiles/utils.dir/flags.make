@@ -4,7 +4,7 @@
 # compile C with /usr/bin/clang
 C_DEFINES = 
 
-C_INCLUDES = /home/circuit0/Workshop/learnig/wisp/src/utils /home/circuit0/Workshop/learnig/wisp/src/utils/../include
+C_INCLUDES = -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table
 
-C_FLAGS = -g
+C_FLAGS = -g -std=gnu11
 

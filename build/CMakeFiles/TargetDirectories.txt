@@ -7,6 +7,9 @@
 /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles/RISCVTargetParserTableGen.dir
 /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles/edit_cache.dir
 /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles/rebuild_cache.dir
+/home/circuit0/Workshop/learnig/wisp/build/src/utils/CMakeFiles/utils.dir
+/home/circuit0/Workshop/learnig/wisp/build/src/utils/CMakeFiles/edit_cache.dir
+/home/circuit0/Workshop/learnig/wisp/build/src/utils/CMakeFiles/rebuild_cache.dir
 /home/circuit0/Workshop/learnig/wisp/build/src/lexer/CMakeFiles/lexer.dir
 /home/circuit0/Workshop/learnig/wisp/build/src/lexer/CMakeFiles/edit_cache.dir
 /home/circuit0/Workshop/learnig/wisp/build/src/lexer/CMakeFiles/rebuild_cache.dir

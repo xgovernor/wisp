@@ -6,6 +6,16 @@ set(CMAKE_C_STANDARD 11)
 
 include_directories(src/include)
 
+# Add subdirectories for new modules
+add_subdirectory(src/utils)
+cmake_minimum_required(VERSION 3.10)
+
+project(Wisp)
+
+set(CMAKE_C_STANDARD 11)
+
+include_directories(src/include)
+
 
 # Add subdirectories for each module
 add_subdirectory(src/lexer)
@@ -24,6 +34,7 @@ target_link_libraries(wisp
     codegen
     runtime
     modules
+    utils
 )
 
 find_package(LLVM REQUIRED CONFIG)

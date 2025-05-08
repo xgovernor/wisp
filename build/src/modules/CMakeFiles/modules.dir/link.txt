@@ -1,2 +1,2 @@
-/usr/bin/llvm-ar qc libmodules.a CMakeFiles/modules.dir/import.c.o
+/usr/bin/llvm-ar qc libmodules.a CMakeFiles/modules.dir/import.c.o CMakeFiles/modules.dir/symbol_table.c.o
 /usr/bin/llvm-ranlib libmodules.a

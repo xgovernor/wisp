@@ -113,6 +113,7 @@ wisp: src/parser/libparser.a
 wisp: src/codegen/libcodegen.a
 wisp: src/runtime/libruntime.a
 wisp: src/modules/libmodules.a
+wisp: src/utils/libutils.a
 wisp: /usr/lib/llvm-19/lib/libLLVMCore.a
 wisp: /usr/lib/llvm-19/lib/libLLVMExecutionEngine.a
 wisp: /usr/lib/llvm-19/lib/libLLVMIRReader.a

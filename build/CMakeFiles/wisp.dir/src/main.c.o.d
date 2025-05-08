@@ -65,4 +65,6 @@ CMakeFiles/wisp.dir/src/main.c.o: \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/string.h /usr/include/strings.h \
-  /home/circuit0/Workshop/learnig/wisp/src/include/lexer.h
+  /home/circuit0/Workshop/learnig/wisp/src/include/lexer.h \
+  /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h \
+  /home/circuit0/Workshop/learnig/wisp/src/utils/utils.h

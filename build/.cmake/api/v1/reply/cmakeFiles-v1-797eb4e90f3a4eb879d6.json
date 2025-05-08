@@ -334,6 +334,9 @@
 			"path" : "/usr/lib/llvm-19/lib/cmake/llvm/LLVM-Config.cmake"
 		},
 		{
+			"path" : "src/utils/CMakeLists.txt"
+		},
+		{
 			"path" : "src/lexer/CMakeLists.txt"
 		},
 		{

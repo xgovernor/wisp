@@ -3,6 +3,8 @@
 
 CMakeFiles/wisp.dir/src/main.c.o: /home/circuit0/Workshop/learnig/wisp/src/main.c \
   /home/circuit0/Workshop/learnig/wisp/src/include/lexer.h \
+  /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h \
+  /home/circuit0/Workshop/learnig/wisp/src/utils/utils.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \
@@ -98,11 +100,11 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+/usr/include/x86_64-linux-gnu/sys/resource.h:
 
-/usr/include/x86_64-linux-gnu/bits/timex.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/time.h:
 
@@ -122,6 +124,10 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
 /home/circuit0/Workshop/learnig/wisp/src/main.c:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
@@ -133,6 +139,16 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 /usr/include/x86_64-linux-gnu/bits/resource.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/stdc-predef.h:
 
@@ -158,17 +174,9 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 
 /usr/include/stdlib.h:
 
+/home/circuit0/Workshop/learnig/wisp/src/utils/utils.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/features.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
@@ -183,6 +191,10 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
@@ -219,9 +231,3 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/x86_64-linux-gnu/sys/resource.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:

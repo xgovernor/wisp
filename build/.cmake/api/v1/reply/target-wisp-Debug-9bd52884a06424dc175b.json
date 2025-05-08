@@ -31,25 +31,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 18,
+				"line" : 28,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 21,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 42,
+				"line" : 53,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 29,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
@@ -177,7 +177,7 @@
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 30,
+				"line" : 41,
 				"parent" : 0
 			}
 		]
@@ -240,6 +240,18 @@
 				{
 					"backtrace" : 2,
 					"path" : "/home/circuit0/Workshop/learnig/wisp/src/modules/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/circuit0/Workshop/learnig/wisp/src/utils"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/circuit0/Workshop/learnig/wisp/src/utils/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table"
 				}
 			],
 			"language" : "C",
@@ -260,6 +272,10 @@
 	],
 	"dependencies" : 
 	[
+		{
+			"backtrace" : 2,
+			"id" : "utils::@f1b38b22aeb65474a6c5"
+		},
 		{
 			"backtrace" : 2,
 			"id" : "lexer::@fb2aa3322c6159d16365"
@@ -317,6 +333,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "src/modules/libmodules.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "src/utils/libutils.a",
 				"role" : "libraries"
 			},
 			{

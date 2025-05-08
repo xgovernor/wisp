@@ -208,6 +208,19 @@ RISCVTargetParserTableGen/fast:
 .PHONY : RISCVTargetParserTableGen/fast
 
 #=============================================================================
+# Target rules for targets named utils
+
+# Build rule for target.
+utils: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils
+.PHONY : utils
+
+# fast build rule for target.
+utils/fast:
+	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/build
+.PHONY : utils/fast
+
+#=============================================================================
 # Target rules for targets named lexer
 
 # Build rule for target.
@@ -339,6 +352,7 @@ help:
 	@echo "... modules"
 	@echo "... parser"
 	@echo "... runtime"
+	@echo "... utils"
 	@echo "... wisp"
 	@echo "... src/main.o"
 	@echo "... src/main.i"

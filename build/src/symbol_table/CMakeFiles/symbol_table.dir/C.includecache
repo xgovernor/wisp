@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/circuit0/Workshop/learnig/wisp/src/symbol_table/symbol_table.c
+symbol_table.h
+/home/circuit0/Workshop/learnig/wisp/src/symbol_table/symbol_table.h
+string.h
+-
+stdio.h
+-
+
+/home/circuit0/Workshop/learnig/wisp/src/symbol_table/symbol_table.h
+
