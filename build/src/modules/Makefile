@@ -175,6 +175,30 @@ modules/fast:
 	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/build
 .PHONY : modules/fast
 
+cli.o: cli.c.o
+.PHONY : cli.o
+
+# target to build an object file
+cli.c.o:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/cli.c.o
+.PHONY : cli.c.o
+
+cli.i: cli.c.i
+.PHONY : cli.i
+
+# target to preprocess a source file
+cli.c.i:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/cli.c.i
+.PHONY : cli.c.i
+
+cli.s: cli.c.s
+.PHONY : cli.s
+
+# target to generate assembly for a file
+cli.c.s:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/cli.c.s
+.PHONY : cli.c.s
+
 import.o: import.c.o
 .PHONY : import.o
 
@@ -236,6 +260,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... modules"
+	@echo "... cli.o"
+	@echo "... cli.i"
+	@echo "... cli.s"
 	@echo "... import.o"
 	@echo "... import.i"
 	@echo "... import.s"

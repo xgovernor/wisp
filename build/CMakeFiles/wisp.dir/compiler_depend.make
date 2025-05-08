@@ -3,6 +3,7 @@
 
 CMakeFiles/wisp.dir/src/main.c.o: /home/circuit0/Workshop/learnig/wisp/src/main.c \
   /home/circuit0/Workshop/learnig/wisp/src/include/lexer.h \
+  /home/circuit0/Workshop/learnig/wisp/src/modules/cli.h \
   /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h \
   /home/circuit0/Workshop/learnig/wisp/src/utils/utils.h \
   /usr/include/alloca.h \
@@ -74,6 +75,7 @@ CMakeFiles/wisp.dir/src/main.c.o: /home/circuit0/Workshop/learnig/wisp/src/main.
   /usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h \
   /usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h \
   /usr/lib/llvm-19/lib/clang/19/include/stdarg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdbool.h \
   /usr/lib/llvm-19/lib/clang/19/include/stddef.h
 
 CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.c \
@@ -83,6 +85,8 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 /home/circuit0/Workshop/learnig/wisp/src/wisp.h:
 
 /usr/lib/llvm-19/lib/clang/19/include/stddef.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/stdbool.h:
 
 /usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h:
 
@@ -106,9 +110,9 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/usr/include/time.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+/usr/include/time.h:
 
 /usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h:
 
@@ -128,7 +132,13 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
+/usr/include/strings.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
 /home/circuit0/Workshop/learnig/wisp/src/main.c:
+
+/home/circuit0/Workshop/learnig/wisp/src/modules/cli.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
@@ -140,6 +150,8 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h:
@@ -149,16 +161,6 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/usr/include/endian.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/alloca.h:
 
@@ -178,10 +180,6 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/strings.h:
-
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/string.h:
@@ -190,7 +188,15 @@ CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 

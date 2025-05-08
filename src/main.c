@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lexer.h"
-
+#include "modules/cli.h"
 #include "modules/symbol_table.h"
 #include "utils/utils.h"
 
@@ -27,146 +27,163 @@
  */
 int main(int argc, char **argv)
 {
-    // Language info
-    const char *LANG_NAME = "Wisp";
-    const char *LANG_AUTHOR = "Abu Taher Muhammad";
-    const char *LANG_VERSION = "0.1.0";
-    int show_stats = 0;
-    int show_info = 0;
-    char *script_file = NULL;
 
-    // Parse flags and find script filename (allow flags in any order)
-    for (int i = 1; i < argc; ++i)
+    WispCLIOptions opts;
+    if (wisp_parse_cli(argc, argv, &opts) != 0)
     {
-        if (strcmp(argv[i], "--info") == 0)
-            show_info = 1;
-        else if (strcmp(argv[i], "--stats") == 0)
-            show_stats = 1;
-        else if (!script_file && argv[i][0] != '-')
-            script_file = argv[i];
+        fprintf(stderr, "Try '%s --help' for usage.\n", argv[0]);
+        return 1;
     }
 
-    if (show_info)
+    if (opts.show_help)
     {
-        printf("Language: %s\nAuthor: %s\nVersion: %s\n", LANG_NAME, LANG_AUTHOR, LANG_VERSION);
-        // If only --info is given, exit. If script is also given, continue to run script.
-        if (!script_file)
-            return 0;
+        wisp_print_help(argv[0]);
+        wisp_cli_options_free(&opts);
+        return 0;
+    }
+    if (opts.show_version)
+    {
+        wisp_print_version();
+        wisp_cli_options_free(&opts);
+        return 0;
     }
 
-    printf("\033[36m%s v%s by %s\033[0m\n", LANG_NAME, LANG_VERSION, LANG_AUTHOR);
+    printf("\033[36mWelcome to Wisp v0.2.0.\033[0m\n");
 
     struct rusage usage_start, usage_end;
     struct timespec t_start, t_end;
-    if (show_stats)
+    if (opts.show_stats)
     {
         getrusage(RUSAGE_SELF, &usage_start);
         clock_gettime(CLOCK_MONOTONIC, &t_start);
     }
 
-    if (!script_file)
+    if (!opts.script_file && !opts.command && !opts.interactive)
     {
-        fprintf(stderr, "Usage: %s [--info] [--stats] <source_file>\n", argv[0]);
+        fprintf(stderr, "Usage: %s [options] <script> [-- [script arguments]]\n", argv[0]);
+        wisp_cli_options_free(&opts);
         return 1;
     }
 
-    // Read the source file
-    FILE *file = fopen(script_file, "r");
-    if (!file)
+    // Handle -c/--command (execute code string)
+    if (opts.command)
     {
-        perror("Failed to open source file");
-        return 1;
+        // TODO: interpret code in opts.command
+        printf("[Stub] Would execute: %s\n", opts.command);
+        wisp_cli_options_free(&opts);
+        return 0;
     }
-    fseek(file, 0, SEEK_END);
-    long length = ftell(file);
-    fseek(file, 0, SEEK_SET);
-    char *source = malloc(length + 1);
-    fread(source, 1, length, file);
-    source[length] = '\0';
-    fclose(file);
 
-    // Tokenize and interpret
-    Token *token = NULL;
-    int first = 1;
-    while ((token = get_next_token(first ? source : NULL)) && token->type != TOKEN_EOF)
+    // Handle -e/--eval (REPL)
+    if (opts.interactive)
     {
-        first = 0;
-        if (token->type == TOKEN_LET || token->type == TOKEN_CONSTANT)
+        // TODO: launch REPL
+        printf("[Stub] Would launch REPL\n");
+        wisp_cli_options_free(&opts);
+        return 0;
+    }
+
+    // Handle script file execution
+    if (opts.script_file)
+    {
+        FILE *file = fopen(opts.script_file, "r");
+        if (!file)
         {
-            int is_const = (token->type == TOKEN_CONSTANT);
-            free_token(token);
-            Token *name_token = get_next_token(NULL);
-            if (!name_token || name_token->type != TOKEN_IDENTIFIER)
-            {
-                fprintf(stderr, "Syntax error: expected variable name after let/constant\n");
-                if (name_token)
-                    free_token(name_token);
-                continue;
-            }
-            char varname[MAX_NAME_LEN];
-            strncpy(varname, name_token->value, MAX_NAME_LEN);
-            free_token(name_token);
-            Token *typedef_token = get_next_token(NULL);
-            if (!typedef_token || typedef_token->type != TOKEN_TYPEDEF)
-            {
-                fprintf(stderr, "Syntax error: expected type definition in () after variable name\n");
-                if (typedef_token)
-                    free_token(typedef_token);
-                continue;
-            }
-            char vartype[MAX_TYPE_LEN];
-            strncpy(vartype, typedef_token->value, MAX_TYPE_LEN);
-            free_token(typedef_token);
-            Token *is_token = get_next_token(NULL);
-            if (!is_token || is_token->type != TOKEN_IS)
-            {
-                fprintf(stderr, "Syntax error: expected 'is' after type definition\n");
-                if (is_token)
-                    free_token(is_token);
-                continue;
-            }
-            free_token(is_token);
-            Token *value_token = get_next_token(NULL);
-            if (!value_token || (value_token->type != TOKEN_STRING && value_token->type != TOKEN_NUMBER && value_token->type != TOKEN_IDENTIFIER))
-            {
-                fprintf(stderr, "Syntax error: expected value after 'is'\n");
-                if (value_token)
-                    free_token(value_token);
-                continue;
-            }
-            add_variable(varname, vartype, value_token->value, is_const);
-            free_token(value_token);
-            Token *semi_token = get_next_token(NULL);
-            if (semi_token)
-                free_token(semi_token);
-            continue;
+            perror("Failed to open script file");
+            wisp_cli_options_free(&opts);
+            return 1;
         }
-        if (token->type == TOKEN_SHOW)
+        fseek(file, 0, SEEK_END);
+        long length = ftell(file);
+        fseek(file, 0, SEEK_SET);
+        char *source = malloc(length + 1);
+        fread(source, 1, length, file);
+        source[length] = '\0';
+        fclose(file);
+
+        // Tokenize and interpret (original logic)
+        Token *token = NULL;
+        int first = 1;
+        while ((token = get_next_token(first ? source : NULL)) && token->type != TOKEN_EOF)
         {
-            free_token(token);
-            Token *string_token = get_next_token(NULL);
-            if (string_token && string_token->type == TOKEN_STRING)
+            first = 0;
+            if (token->type == TOKEN_LET || token->type == TOKEN_CONSTANT)
             {
-                printf("%s\n", interpolate(string_token->value));
-                free_token(string_token);
+                int is_const = (token->type == TOKEN_CONSTANT);
+                free_token(token);
+                Token *name_token = get_next_token(NULL);
+                if (!name_token || name_token->type != TOKEN_IDENTIFIER)
+                {
+                    fprintf(stderr, "Syntax error: expected variable name after let/constant\n");
+                    if (name_token)
+                        free_token(name_token);
+                    continue;
+                }
+                char varname[MAX_NAME_LEN];
+                strncpy(varname, name_token->value, MAX_NAME_LEN);
+                free_token(name_token);
+                Token *typedef_token = get_next_token(NULL);
+                if (!typedef_token || typedef_token->type != TOKEN_TYPEDEF)
+                {
+                    fprintf(stderr, "Syntax error: expected type definition in () after variable name\n");
+                    if (typedef_token)
+                        free_token(typedef_token);
+                    continue;
+                }
+                char vartype[MAX_TYPE_LEN];
+                strncpy(vartype, typedef_token->value, MAX_TYPE_LEN);
+                free_token(typedef_token);
+                Token *is_token = get_next_token(NULL);
+                if (!is_token || is_token->type != TOKEN_IS)
+                {
+                    fprintf(stderr, "Syntax error: expected 'is' after type definition\n");
+                    if (is_token)
+                        free_token(is_token);
+                    continue;
+                }
+                free_token(is_token);
+                Token *value_token = get_next_token(NULL);
+                if (!value_token || (value_token->type != TOKEN_STRING && value_token->type != TOKEN_NUMBER && value_token->type != TOKEN_IDENTIFIER))
+                {
+                    fprintf(stderr, "Syntax error: expected value after 'is'\n");
+                    if (value_token)
+                        free_token(value_token);
+                    continue;
+                }
+                add_variable(varname, vartype, value_token->value, is_const);
+                free_token(value_token);
                 Token *semi_token = get_next_token(NULL);
-                free_token(semi_token);
+                if (semi_token)
+                    free_token(semi_token);
+                continue;
             }
-            else
+            if (token->type == TOKEN_SHOW)
             {
-                fprintf(stderr, "\033[31mSyntax error: expected string after show\033[0m\n");
-                if (string_token)
+                free_token(token);
+                Token *string_token = get_next_token(NULL);
+                if (string_token && string_token->type == TOKEN_STRING)
+                {
+                    printf("%s\n", interpolate(string_token->value));
                     free_token(string_token);
+                    Token *semi_token = get_next_token(NULL);
+                    free_token(semi_token);
+                }
+                else
+                {
+                    fprintf(stderr, "\033[31mSyntax error: expected string after show\033[0m\n");
+                    if (string_token)
+                        free_token(string_token);
+                }
+                continue;
             }
-            continue;
+            free_token(token);
         }
-        free_token(token);
+        if (token)
+            free_token(token);
+        free(source);
     }
-    if (token)
-        free_token(token);
-    free(source);
 
-    if (show_stats)
+    if (opts.show_stats)
     {
         getrusage(RUSAGE_SELF, &usage_end);
         clock_gettime(CLOCK_MONOTONIC, &t_end);
@@ -174,5 +191,6 @@ int main(int argc, char **argv)
         long mem_kb = usage_end.ru_maxrss;
         printf("\033[33m[Stats] Time: %.6f sec | Max Memory: %ld KB\033[0m\n", elapsed, mem_kb);
     }
+    wisp_cli_options_free(&opts);
     return 0;
 }

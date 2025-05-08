@@ -52,5 +52,11 @@
   "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -g -std=gnu11 -o CMakeFiles/modules.dir/symbol_table.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c",
   "output": "src/modules/CMakeFiles/modules.dir/symbol_table.c.o"
+},
+{
+  "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/modules",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -g -std=gnu11 -o CMakeFiles/modules.dir/cli.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c",
+  "file": "/home/circuit0/Workshop/learnig/wisp/src/modules/cli.c",
+  "output": "src/modules/CMakeFiles/modules.dir/cli.c.o"
 }
 ]

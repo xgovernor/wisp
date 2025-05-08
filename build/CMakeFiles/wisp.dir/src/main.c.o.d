@@ -66,5 +66,7 @@ CMakeFiles/wisp.dir/src/main.c.o: \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/string.h /usr/include/strings.h \
   /home/circuit0/Workshop/learnig/wisp/src/include/lexer.h \
+  /home/circuit0/Workshop/learnig/wisp/src/modules/cli.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdbool.h \
   /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h \
   /home/circuit0/Workshop/learnig/wisp/src/utils/utils.h

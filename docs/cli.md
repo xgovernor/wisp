@@ -1,27 +1,47 @@
-# CLI Usage
+# Wisp Interpreter Command-Line Interface (CLI)
 
-## Building
+The Wisp interpreter provides a production-ready, extensible command-line interface following standard conventions for language tools.
 
-From the project root:
+## Usage
 
-```bash
-mkdir -p build
-cd build
-cmake ..
-make
+```
+wisp [options] <script> [-- [script arguments]]
 ```
 
-## Running Scripts
+## Options
 
-```bash
-./wisp ../tests/variable_test.lang
+| Short | Long         | Argument   | Description                                 |
+|-------|--------------|------------|---------------------------------------------|
+| `-h`  | `--help`     |            | Show this help message and exit             |
+| `-v`  | `--version`  |            | Show version information and exit           |
+| `-s`  | `--stats`    |            | Show execution time and memory usage        |
+| `-I`  | `--include`  | `<dir>`    | Add directory to module search path         |
+| `-c`  | `--command`  | `<code>`   | Execute code passed in as a string          |
+| `-e`  | `--eval`     |            | Enter interactive mode (REPL)               |
+| `-o`  | `--output`   | `<file>`   | Write output to file instead of stdout      |
+|       | `--no-color` |            | Disable colored output                      |
+|       | `--strict`   |            | Enable strict mode (fail on warnings)       |
+|       | `--debug`    |            | Enable debug output                         |
+
+## Arguments
+
+- `<script>`: Script file to execute
+- `--`: End of options; following are script arguments
+
+## Examples
+
+```sh
+wisp --help
+wisp --version
+wisp -s myscript.lang
+wisp -I ./lib -I ./vendor myscript.lang
+wisp -c "show `Hello`"
+wisp --eval
+wisp myscript.lang -- arg1 arg2
 ```
 
-## CLI Flags
-
-- `--info` Print language name, author, and version.
-- `--stats` Print execution time and memory usage.
-- Flags can be combined in any order:
-  ```bash
-  ./wisp --stats --info ../tests/variable_test.lang
-  ```
+## Implementation Notes
+- Options are parsed using POSIX `getopt_long()` for robust, standard-compliant behavior.
+- Multiple `-I`/`--include` options are supported.
+- `--` can be used to separate interpreter options from script arguments.
+- All options are documented in `src/modules/cli.h` and implemented in `src/modules/cli.c`.

@@ -4,6 +4,7 @@
 CMakeFiles/wisp.dir/src/main.c.o
  /home/circuit0/Workshop/learnig/wisp/src/main.c
  /home/circuit0/Workshop/learnig/wisp/src/include/lexer.h
+ /home/circuit0/Workshop/learnig/wisp/src/modules/cli.h
  /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h
  /home/circuit0/Workshop/learnig/wisp/src/utils/utils.h
  /usr/include/alloca.h
@@ -75,6 +76,7 @@ CMakeFiles/wisp.dir/src/main.c.o
  /usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h
  /usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h
  /usr/lib/llvm-19/lib/clang/19/include/stdarg.h
+ /usr/lib/llvm-19/lib/clang/19/include/stdbool.h
  /usr/lib/llvm-19/lib/clang/19/include/stddef.h
 
 CMakeFiles/wisp.dir/src/wisp.c.o
