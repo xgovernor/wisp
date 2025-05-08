@@ -69,38 +69,10 @@ include CMakeFiles/wisp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/wisp.dir/flags.make
 
-CMakeFiles/wisp.dir/src/codegen.c.o: CMakeFiles/wisp.dir/flags.make
-CMakeFiles/wisp.dir/src/codegen.c.o: /home/circuit0/Workshop/learnig/wisp/src/codegen.c
-CMakeFiles/wisp.dir/src/codegen.c.o: CMakeFiles/wisp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/wisp.dir/src/codegen.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/wisp.dir/src/codegen.c.o -MF CMakeFiles/wisp.dir/src/codegen.c.o.d -o CMakeFiles/wisp.dir/src/codegen.c.o -c /home/circuit0/Workshop/learnig/wisp/src/codegen.c
-
-CMakeFiles/wisp.dir/src/codegen.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/wisp.dir/src/codegen.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/codegen.c > CMakeFiles/wisp.dir/src/codegen.c.i
-
-CMakeFiles/wisp.dir/src/codegen.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/wisp.dir/src/codegen.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/codegen.c -o CMakeFiles/wisp.dir/src/codegen.c.s
-
-CMakeFiles/wisp.dir/src/lexer.c.o: CMakeFiles/wisp.dir/flags.make
-CMakeFiles/wisp.dir/src/lexer.c.o: /home/circuit0/Workshop/learnig/wisp/src/lexer.c
-CMakeFiles/wisp.dir/src/lexer.c.o: CMakeFiles/wisp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/wisp.dir/src/lexer.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/wisp.dir/src/lexer.c.o -MF CMakeFiles/wisp.dir/src/lexer.c.o.d -o CMakeFiles/wisp.dir/src/lexer.c.o -c /home/circuit0/Workshop/learnig/wisp/src/lexer.c
-
-CMakeFiles/wisp.dir/src/lexer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/wisp.dir/src/lexer.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/lexer.c > CMakeFiles/wisp.dir/src/lexer.c.i
-
-CMakeFiles/wisp.dir/src/lexer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/wisp.dir/src/lexer.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/lexer.c -o CMakeFiles/wisp.dir/src/lexer.c.s
-
 CMakeFiles/wisp.dir/src/main.c.o: CMakeFiles/wisp.dir/flags.make
 CMakeFiles/wisp.dir/src/main.c.o: /home/circuit0/Workshop/learnig/wisp/src/main.c
 CMakeFiles/wisp.dir/src/main.c.o: CMakeFiles/wisp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/wisp.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/wisp.dir/src/main.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/wisp.dir/src/main.c.o -MF CMakeFiles/wisp.dir/src/main.c.o.d -o CMakeFiles/wisp.dir/src/main.c.o -c /home/circuit0/Workshop/learnig/wisp/src/main.c
 
 CMakeFiles/wisp.dir/src/main.c.i: cmake_force
@@ -111,35 +83,36 @@ CMakeFiles/wisp.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/wisp.dir/src/main.c.s"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/main.c -o CMakeFiles/wisp.dir/src/main.c.s
 
-CMakeFiles/wisp.dir/src/parser.c.o: CMakeFiles/wisp.dir/flags.make
-CMakeFiles/wisp.dir/src/parser.c.o: /home/circuit0/Workshop/learnig/wisp/src/parser.c
-CMakeFiles/wisp.dir/src/parser.c.o: CMakeFiles/wisp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/wisp.dir/src/parser.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/wisp.dir/src/parser.c.o -MF CMakeFiles/wisp.dir/src/parser.c.o.d -o CMakeFiles/wisp.dir/src/parser.c.o -c /home/circuit0/Workshop/learnig/wisp/src/parser.c
+CMakeFiles/wisp.dir/src/wisp.c.o: CMakeFiles/wisp.dir/flags.make
+CMakeFiles/wisp.dir/src/wisp.c.o: /home/circuit0/Workshop/learnig/wisp/src/wisp.c
+CMakeFiles/wisp.dir/src/wisp.c.o: CMakeFiles/wisp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/wisp.dir/src/wisp.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/wisp.dir/src/wisp.c.o -MF CMakeFiles/wisp.dir/src/wisp.c.o.d -o CMakeFiles/wisp.dir/src/wisp.c.o -c /home/circuit0/Workshop/learnig/wisp/src/wisp.c
 
-CMakeFiles/wisp.dir/src/parser.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/wisp.dir/src/parser.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/parser.c > CMakeFiles/wisp.dir/src/parser.c.i
+CMakeFiles/wisp.dir/src/wisp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/wisp.dir/src/wisp.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/wisp.c > CMakeFiles/wisp.dir/src/wisp.c.i
 
-CMakeFiles/wisp.dir/src/parser.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/wisp.dir/src/parser.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/parser.c -o CMakeFiles/wisp.dir/src/parser.c.s
+CMakeFiles/wisp.dir/src/wisp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/wisp.dir/src/wisp.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/wisp.c -o CMakeFiles/wisp.dir/src/wisp.c.s
 
 # Object files for target wisp
 wisp_OBJECTS = \
-"CMakeFiles/wisp.dir/src/codegen.c.o" \
-"CMakeFiles/wisp.dir/src/lexer.c.o" \
 "CMakeFiles/wisp.dir/src/main.c.o" \
-"CMakeFiles/wisp.dir/src/parser.c.o"
+"CMakeFiles/wisp.dir/src/wisp.c.o"
 
 # External object files for target wisp
 wisp_EXTERNAL_OBJECTS =
 
-wisp: CMakeFiles/wisp.dir/src/codegen.c.o
-wisp: CMakeFiles/wisp.dir/src/lexer.c.o
 wisp: CMakeFiles/wisp.dir/src/main.c.o
-wisp: CMakeFiles/wisp.dir/src/parser.c.o
+wisp: CMakeFiles/wisp.dir/src/wisp.c.o
 wisp: CMakeFiles/wisp.dir/build.make
+wisp: src/lexer/liblexer.a
+wisp: src/parser/libparser.a
+wisp: src/codegen/libcodegen.a
+wisp: src/runtime/libruntime.a
+wisp: src/modules/libmodules.a
 wisp: /usr/lib/llvm-19/lib/libLLVMCore.a
 wisp: /usr/lib/llvm-19/lib/libLLVMExecutionEngine.a
 wisp: /usr/lib/llvm-19/lib/libLLVMIRReader.a
@@ -193,7 +166,7 @@ wisp: /usr/lib/llvm-19/lib/libLLVMDemangle.a
 wisp: /usr/lib/x86_64-linux-gnu/libz.so
 wisp: /usr/lib/x86_64-linux-gnu/libzstd.so
 wisp: CMakeFiles/wisp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable wisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable wisp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wisp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

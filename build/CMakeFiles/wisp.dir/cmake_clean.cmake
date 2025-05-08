@@ -1,12 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/wisp.dir/src/codegen.c.o"
-  "CMakeFiles/wisp.dir/src/codegen.c.o.d"
-  "CMakeFiles/wisp.dir/src/lexer.c.o"
-  "CMakeFiles/wisp.dir/src/lexer.c.o.d"
   "CMakeFiles/wisp.dir/src/main.c.o"
   "CMakeFiles/wisp.dir/src/main.c.o.d"
-  "CMakeFiles/wisp.dir/src/parser.c.o"
-  "CMakeFiles/wisp.dir/src/parser.c.o.d"
+  "CMakeFiles/wisp.dir/src/wisp.c.o"
+  "CMakeFiles/wisp.dir/src/wisp.c.o.d"
   "wisp"
   "wisp.pdb"
 )

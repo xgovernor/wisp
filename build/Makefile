@@ -207,53 +207,70 @@ RISCVTargetParserTableGen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RISCVTargetParserTableGen.dir/build.make CMakeFiles/RISCVTargetParserTableGen.dir/build
 .PHONY : RISCVTargetParserTableGen/fast
 
-src/codegen.o: src/codegen.c.o
-.PHONY : src/codegen.o
+#=============================================================================
+# Target rules for targets named lexer
 
-# target to build an object file
-src/codegen.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/codegen.c.o
-.PHONY : src/codegen.c.o
+# Build rule for target.
+lexer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lexer
+.PHONY : lexer
 
-src/codegen.i: src/codegen.c.i
-.PHONY : src/codegen.i
+# fast build rule for target.
+lexer/fast:
+	$(MAKE) $(MAKESILENT) -f src/lexer/CMakeFiles/lexer.dir/build.make src/lexer/CMakeFiles/lexer.dir/build
+.PHONY : lexer/fast
 
-# target to preprocess a source file
-src/codegen.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/codegen.c.i
-.PHONY : src/codegen.c.i
+#=============================================================================
+# Target rules for targets named parser
 
-src/codegen.s: src/codegen.c.s
-.PHONY : src/codegen.s
+# Build rule for target.
+parser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parser
+.PHONY : parser
 
-# target to generate assembly for a file
-src/codegen.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/codegen.c.s
-.PHONY : src/codegen.c.s
+# fast build rule for target.
+parser/fast:
+	$(MAKE) $(MAKESILENT) -f src/parser/CMakeFiles/parser.dir/build.make src/parser/CMakeFiles/parser.dir/build
+.PHONY : parser/fast
 
-src/lexer.o: src/lexer.c.o
-.PHONY : src/lexer.o
+#=============================================================================
+# Target rules for targets named codegen
 
-# target to build an object file
-src/lexer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/lexer.c.o
-.PHONY : src/lexer.c.o
+# Build rule for target.
+codegen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
+.PHONY : codegen
 
-src/lexer.i: src/lexer.c.i
-.PHONY : src/lexer.i
+# fast build rule for target.
+codegen/fast:
+	$(MAKE) $(MAKESILENT) -f src/codegen/CMakeFiles/codegen.dir/build.make src/codegen/CMakeFiles/codegen.dir/build
+.PHONY : codegen/fast
 
-# target to preprocess a source file
-src/lexer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/lexer.c.i
-.PHONY : src/lexer.c.i
+#=============================================================================
+# Target rules for targets named runtime
 
-src/lexer.s: src/lexer.c.s
-.PHONY : src/lexer.s
+# Build rule for target.
+runtime: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runtime
+.PHONY : runtime
 
-# target to generate assembly for a file
-src/lexer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/lexer.c.s
-.PHONY : src/lexer.c.s
+# fast build rule for target.
+runtime/fast:
+	$(MAKE) $(MAKESILENT) -f src/runtime/CMakeFiles/runtime.dir/build.make src/runtime/CMakeFiles/runtime.dir/build
+.PHONY : runtime/fast
+
+#=============================================================================
+# Target rules for targets named modules
+
+# Build rule for target.
+modules: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 modules
+.PHONY : modules
+
+# fast build rule for target.
+modules/fast:
+	$(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/build
+.PHONY : modules/fast
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -279,29 +296,29 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/parser.o: src/parser.c.o
-.PHONY : src/parser.o
+src/wisp.o: src/wisp.c.o
+.PHONY : src/wisp.o
 
 # target to build an object file
-src/parser.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/parser.c.o
-.PHONY : src/parser.c.o
+src/wisp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/wisp.c.o
+.PHONY : src/wisp.c.o
 
-src/parser.i: src/parser.c.i
-.PHONY : src/parser.i
+src/wisp.i: src/wisp.c.i
+.PHONY : src/wisp.i
 
 # target to preprocess a source file
-src/parser.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/parser.c.i
-.PHONY : src/parser.c.i
+src/wisp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/wisp.c.i
+.PHONY : src/wisp.c.i
 
-src/parser.s: src/parser.c.s
-.PHONY : src/parser.s
+src/wisp.s: src/wisp.c.s
+.PHONY : src/wisp.s
 
 # target to generate assembly for a file
-src/parser.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/parser.c.s
-.PHONY : src/parser.c.s
+src/wisp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/wisp.c.s
+.PHONY : src/wisp.c.s
 
 # Help Target
 help:
@@ -317,19 +334,18 @@ help:
 	@echo "... acc_gen"
 	@echo "... intrinsics_gen"
 	@echo "... omp_gen"
+	@echo "... codegen"
+	@echo "... lexer"
+	@echo "... modules"
+	@echo "... parser"
+	@echo "... runtime"
 	@echo "... wisp"
-	@echo "... src/codegen.o"
-	@echo "... src/codegen.i"
-	@echo "... src/codegen.s"
-	@echo "... src/lexer.o"
-	@echo "... src/lexer.i"
-	@echo "... src/lexer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/parser.o"
-	@echo "... src/parser.i"
-	@echo "... src/parser.s"
+	@echo "... src/wisp.o"
+	@echo "... src/wisp.i"
+	@echo "... src/wisp.s"
 .PHONY : help
 
 

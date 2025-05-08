@@ -64,10 +64,19 @@ CMAKE_BINARY_DIR = /home/circuit0/Workshop/learnig/wisp/build
 
 # The main recursive "all" target.
 all: CMakeFiles/wisp.dir/all
+all: src/lexer/all
+all: src/parser/all
+all: src/codegen/all
+all: src/runtime/all
+all: src/modules/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: src/lexer/preinstall
+preinstall: src/parser/preinstall
+preinstall: src/codegen/preinstall
+preinstall: src/runtime/preinstall
+preinstall: src/modules/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -78,21 +87,105 @@ clean: CMakeFiles/acc_gen.dir/clean
 clean: CMakeFiles/ARMTargetParserTableGen.dir/clean
 clean: CMakeFiles/AArch64TargetParserTableGen.dir/clean
 clean: CMakeFiles/RISCVTargetParserTableGen.dir/clean
+clean: src/lexer/clean
+clean: src/parser/clean
+clean: src/codegen/clean
+clean: src/runtime/clean
+clean: src/modules/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/codegen
+
+# Recursive "all" directory target.
+src/codegen/all: src/codegen/CMakeFiles/codegen.dir/all
+.PHONY : src/codegen/all
+
+# Recursive "preinstall" directory target.
+src/codegen/preinstall:
+.PHONY : src/codegen/preinstall
+
+# Recursive "clean" directory target.
+src/codegen/clean: src/codegen/CMakeFiles/codegen.dir/clean
+.PHONY : src/codegen/clean
+
+#=============================================================================
+# Directory level rules for directory src/lexer
+
+# Recursive "all" directory target.
+src/lexer/all: src/lexer/CMakeFiles/lexer.dir/all
+.PHONY : src/lexer/all
+
+# Recursive "preinstall" directory target.
+src/lexer/preinstall:
+.PHONY : src/lexer/preinstall
+
+# Recursive "clean" directory target.
+src/lexer/clean: src/lexer/CMakeFiles/lexer.dir/clean
+.PHONY : src/lexer/clean
+
+#=============================================================================
+# Directory level rules for directory src/modules
+
+# Recursive "all" directory target.
+src/modules/all: src/modules/CMakeFiles/modules.dir/all
+.PHONY : src/modules/all
+
+# Recursive "preinstall" directory target.
+src/modules/preinstall:
+.PHONY : src/modules/preinstall
+
+# Recursive "clean" directory target.
+src/modules/clean: src/modules/CMakeFiles/modules.dir/clean
+.PHONY : src/modules/clean
+
+#=============================================================================
+# Directory level rules for directory src/parser
+
+# Recursive "all" directory target.
+src/parser/all: src/parser/CMakeFiles/parser.dir/all
+.PHONY : src/parser/all
+
+# Recursive "preinstall" directory target.
+src/parser/preinstall:
+.PHONY : src/parser/preinstall
+
+# Recursive "clean" directory target.
+src/parser/clean: src/parser/CMakeFiles/parser.dir/clean
+.PHONY : src/parser/clean
+
+#=============================================================================
+# Directory level rules for directory src/runtime
+
+# Recursive "all" directory target.
+src/runtime/all: src/runtime/CMakeFiles/runtime.dir/all
+.PHONY : src/runtime/all
+
+# Recursive "preinstall" directory target.
+src/runtime/preinstall:
+.PHONY : src/runtime/preinstall
+
+# Recursive "clean" directory target.
+src/runtime/clean: src/runtime/CMakeFiles/runtime.dir/clean
+.PHONY : src/runtime/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/wisp.dir
 
 # All Build rule for target.
-CMakeFiles/wisp.dir/all:
+CMakeFiles/wisp.dir/all: src/lexer/CMakeFiles/lexer.dir/all
+CMakeFiles/wisp.dir/all: src/parser/CMakeFiles/parser.dir/all
+CMakeFiles/wisp.dir/all: src/codegen/CMakeFiles/codegen.dir/all
+CMakeFiles/wisp.dir/all: src/runtime/CMakeFiles/runtime.dir/all
+CMakeFiles/wisp.dir/all: src/modules/CMakeFiles/modules.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target wisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=11,12,13 "Built target wisp"
 .PHONY : CMakeFiles/wisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/wisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/wisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
 .PHONY : CMakeFiles/wisp.dir/rule
@@ -261,6 +354,136 @@ RISCVTargetParserTableGen: CMakeFiles/RISCVTargetParserTableGen.dir/rule
 CMakeFiles/RISCVTargetParserTableGen.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RISCVTargetParserTableGen.dir/build.make CMakeFiles/RISCVTargetParserTableGen.dir/clean
 .PHONY : CMakeFiles/RISCVTargetParserTableGen.dir/clean
+
+#=============================================================================
+# Target rules for target src/lexer/CMakeFiles/lexer.dir
+
+# All Build rule for target.
+src/lexer/CMakeFiles/lexer.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/lexer/CMakeFiles/lexer.dir/build.make src/lexer/CMakeFiles/lexer.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/lexer/CMakeFiles/lexer.dir/build.make src/lexer/CMakeFiles/lexer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=3,4 "Built target lexer"
+.PHONY : src/lexer/CMakeFiles/lexer.dir/all
+
+# Build rule for subdir invocation for target.
+src/lexer/CMakeFiles/lexer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lexer/CMakeFiles/lexer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
+.PHONY : src/lexer/CMakeFiles/lexer.dir/rule
+
+# Convenience name for target.
+lexer: src/lexer/CMakeFiles/lexer.dir/rule
+.PHONY : lexer
+
+# clean rule for target.
+src/lexer/CMakeFiles/lexer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/lexer/CMakeFiles/lexer.dir/build.make src/lexer/CMakeFiles/lexer.dir/clean
+.PHONY : src/lexer/CMakeFiles/lexer.dir/clean
+
+#=============================================================================
+# Target rules for target src/parser/CMakeFiles/parser.dir
+
+# All Build rule for target.
+src/parser/CMakeFiles/parser.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/parser/CMakeFiles/parser.dir/build.make src/parser/CMakeFiles/parser.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/parser/CMakeFiles/parser.dir/build.make src/parser/CMakeFiles/parser.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=7,8 "Built target parser"
+.PHONY : src/parser/CMakeFiles/parser.dir/all
+
+# Build rule for subdir invocation for target.
+src/parser/CMakeFiles/parser.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/parser/CMakeFiles/parser.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
+.PHONY : src/parser/CMakeFiles/parser.dir/rule
+
+# Convenience name for target.
+parser: src/parser/CMakeFiles/parser.dir/rule
+.PHONY : parser
+
+# clean rule for target.
+src/parser/CMakeFiles/parser.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/parser/CMakeFiles/parser.dir/build.make src/parser/CMakeFiles/parser.dir/clean
+.PHONY : src/parser/CMakeFiles/parser.dir/clean
+
+#=============================================================================
+# Target rules for target src/codegen/CMakeFiles/codegen.dir
+
+# All Build rule for target.
+src/codegen/CMakeFiles/codegen.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/codegen/CMakeFiles/codegen.dir/build.make src/codegen/CMakeFiles/codegen.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/codegen/CMakeFiles/codegen.dir/build.make src/codegen/CMakeFiles/codegen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=1,2 "Built target codegen"
+.PHONY : src/codegen/CMakeFiles/codegen.dir/all
+
+# Build rule for subdir invocation for target.
+src/codegen/CMakeFiles/codegen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/codegen/CMakeFiles/codegen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
+.PHONY : src/codegen/CMakeFiles/codegen.dir/rule
+
+# Convenience name for target.
+codegen: src/codegen/CMakeFiles/codegen.dir/rule
+.PHONY : codegen
+
+# clean rule for target.
+src/codegen/CMakeFiles/codegen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/codegen/CMakeFiles/codegen.dir/build.make src/codegen/CMakeFiles/codegen.dir/clean
+.PHONY : src/codegen/CMakeFiles/codegen.dir/clean
+
+#=============================================================================
+# Target rules for target src/runtime/CMakeFiles/runtime.dir
+
+# All Build rule for target.
+src/runtime/CMakeFiles/runtime.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/runtime/CMakeFiles/runtime.dir/build.make src/runtime/CMakeFiles/runtime.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/runtime/CMakeFiles/runtime.dir/build.make src/runtime/CMakeFiles/runtime.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=9,10 "Built target runtime"
+.PHONY : src/runtime/CMakeFiles/runtime.dir/all
+
+# Build rule for subdir invocation for target.
+src/runtime/CMakeFiles/runtime.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/runtime/CMakeFiles/runtime.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
+.PHONY : src/runtime/CMakeFiles/runtime.dir/rule
+
+# Convenience name for target.
+runtime: src/runtime/CMakeFiles/runtime.dir/rule
+.PHONY : runtime
+
+# clean rule for target.
+src/runtime/CMakeFiles/runtime.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/runtime/CMakeFiles/runtime.dir/build.make src/runtime/CMakeFiles/runtime.dir/clean
+.PHONY : src/runtime/CMakeFiles/runtime.dir/clean
+
+#=============================================================================
+# Target rules for target src/modules/CMakeFiles/modules.dir
+
+# All Build rule for target.
+src/modules/CMakeFiles/modules.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=5,6 "Built target modules"
+.PHONY : src/modules/CMakeFiles/modules.dir/all
+
+# Build rule for subdir invocation for target.
+src/modules/CMakeFiles/modules.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/modules/CMakeFiles/modules.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
+.PHONY : src/modules/CMakeFiles/modules.dir/rule
+
+# Convenience name for target.
+modules: src/modules/CMakeFiles/modules.dir/rule
+.PHONY : modules
+
+# clean rule for target.
+src/modules/CMakeFiles/modules.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/clean
+.PHONY : src/modules/CMakeFiles/modules.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

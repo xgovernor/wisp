@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						8,
+						11
+					]
+				},
+				{
+					"build" : "src/lexer",
+					"jsonFile" : "directory-src.lexer-Debug-733d2826ff4f3107d902.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/lexer",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "src/parser",
+					"jsonFile" : "directory-src.parser-Debug-835a6c999973ddba8433.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/parser",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/codegen",
+					"jsonFile" : "directory-src.codegen-Debug-0e4a7d6c414a07e68899.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/codegen",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/runtime",
+					"jsonFile" : "directory-src.runtime-Debug-76e21ceddcbd31835e1d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/runtime",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/modules",
+					"jsonFile" : "directory-src.modules-Debug-767fa642459ae0b067b3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/modules",
+					"targetIndexes" : 
+					[
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "Wisp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AArch64TargetParserTableGen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AArch64TargetParserTableGen-Debug-d4ae254920e7c3983c00.json",
+					"name" : "AArch64TargetParserTableGen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ARMTargetParserTableGen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ARMTargetParserTableGen-Debug-d36efe0e396154ff3d18.json",
+					"name" : "ARMTargetParserTableGen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RISCVTargetParserTableGen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RISCVTargetParserTableGen-Debug-66f790505ebe5afcd773.json",
+					"name" : "RISCVTargetParserTableGen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "acc_gen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-acc_gen-Debug-31e5a25690936558da4a.json",
+					"name" : "acc_gen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "codegen::@e649d252a4bd824a981b",
+					"jsonFile" : "target-codegen-Debug-e084698d21526ff100fa.json",
+					"name" : "codegen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "intrinsics_gen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-intrinsics_gen-Debug-bfe90437e25cda37c42a.json",
+					"name" : "intrinsics_gen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "lexer::@fb2aa3322c6159d16365",
+					"jsonFile" : "target-lexer-Debug-12a5a2fba57bbfb8e72a.json",
+					"name" : "lexer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "modules::@e5f2f2a1f21f4df3a143",
+					"jsonFile" : "target-modules-Debug-36053732c5c2a99f0955.json",
+					"name" : "modules",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omp_gen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omp_gen-Debug-f0d52e4769e077a41e69.json",
+					"name" : "omp_gen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "parser::@980325688ee7b2ed96bc",
+					"jsonFile" : "target-parser-Debug-690ad7cc7ae0f00283bd.json",
+					"name" : "parser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "runtime::@6e5025570506519f0aff",
+					"jsonFile" : "target-runtime-Debug-12b6f1d01a2c4b470f60.json",
+					"name" : "runtime",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wisp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wisp-Debug-6ccd58117e553ccc523b.json",
+					"name" : "wisp",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/circuit0/Workshop/learnig/wisp/build",
+		"source" : "/home/circuit0/Workshop/learnig/wisp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

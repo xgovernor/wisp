@@ -8,10 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/circuit0/Workshop/learnig/wisp/src/codegen.c" "CMakeFiles/wisp.dir/src/codegen.c.o" "gcc" "CMakeFiles/wisp.dir/src/codegen.c.o.d"
-  "/home/circuit0/Workshop/learnig/wisp/src/lexer.c" "CMakeFiles/wisp.dir/src/lexer.c.o" "gcc" "CMakeFiles/wisp.dir/src/lexer.c.o.d"
   "/home/circuit0/Workshop/learnig/wisp/src/main.c" "CMakeFiles/wisp.dir/src/main.c.o" "gcc" "CMakeFiles/wisp.dir/src/main.c.o.d"
-  "/home/circuit0/Workshop/learnig/wisp/src/parser.c" "CMakeFiles/wisp.dir/src/parser.c.o" "gcc" "CMakeFiles/wisp.dir/src/parser.c.o.d"
+  "/home/circuit0/Workshop/learnig/wisp/src/wisp.c" "CMakeFiles/wisp.dir/src/wisp.c.o" "gcc" "CMakeFiles/wisp.dir/src/wisp.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
