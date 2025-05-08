@@ -1,0 +1,40 @@
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+*.o
+*.obj
+*.so
+*.a
+*.exe
+*.dll
+*.out
+*.log
+
+# Doxygen output
+docs/doxygen/
+
+# Editor/OS files
+*.swp
+*.swo
+*~
+.DS_Store
+.vscode/
+.idea/
+*.user
+*.bak
+
+# Test output
+*.gcda
+*.gcno
+*.gcov
+
+# Python cache (if any)
+__pycache__/
+*.pyc
+
+# Misc
+*.tmp
+*.old
