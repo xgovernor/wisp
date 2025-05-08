@@ -1,0 +1,30 @@
+// Test import statements
+import 'module_test.lang';         // Should execute module_test.lang (exports, variables)
+import 'show_test.lang';           // Should print show_test.lang's output
+import 'math';                     // Should error (file not found)
+import "os";                       // Should error (file not found)
+import 'math' as m;                // Should error (file not found)
+import "os" as operating_system;   // Should error (file not found)
+
+// from-import, with and without alias
+from 'math' import sqrt, pow;      // Should print [FROM-IMPORT] even if file not found
+from "os" import path, system as sys;
+
+// Error: importing non-exported module
+from 'math' import not_exported;
+
+// Error: invalid import syntax
+import math;
+from 'math' import;
+from 'math' import sqrt as;
+
+// Nested import: show_test.lang imports another file with show
+import 'show_test.lang';
+
+// Duplicate import: should not re-execute show_test.lang
+import 'show_test.lang';
+
+// Import file with syntax error (create tests/syntax_error.lang with invalid code)
+import 'syntax_error.lang';
+
+show `Age: {age}`; // Should print value if age is defined in an imported file
