@@ -1,4 +1,9 @@
+// Wisp Interpreter main entry point
 #define _POSIX_C_SOURCE 200809L
+#define WISP_NAME "Wisp"
+#define WISP_VERSION "0.2.1"
+// #define WISP_AUTHOR "Abu Taher Muhammad"
+#include <errno.h>
 /**
  * @file main.c
  * @brief Entry point for the Wisp interpreter. Handles CLI, file loading, and top-level execution loop.
@@ -48,7 +53,7 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    printf("\033[36mWelcome to Wisp v0.2.0.\033[0m\n");
+    printf("\033[36mWelcome to %s v%s.\033[0m\n", WISP_NAME, WISP_VERSION);
 
     struct rusage usage_start, usage_end;
     struct timespec t_start, t_end;
@@ -66,6 +71,7 @@ int main(int argc, char **argv)
     }
 
     // Handle -c/--command (execute code string)
+
     if (opts.command)
     {
         // TODO: interpret code in opts.command
@@ -84,24 +90,54 @@ int main(int argc, char **argv)
     }
 
     // Handle script file execution
+
     if (opts.script_file)
     {
+        // --- Read the script file into memory safely ---
         FILE *file = fopen(opts.script_file, "r");
         if (!file)
         {
-            perror("Failed to open script file");
+            fprintf(stderr, "Failed to open script file '%s': %s\n", opts.script_file, strerror(errno));
             wisp_cli_options_free(&opts);
             return 1;
         }
-        fseek(file, 0, SEEK_END);
-        long length = ftell(file);
-        fseek(file, 0, SEEK_SET);
-        char *source = malloc(length + 1);
-        fread(source, 1, length, file);
-        source[length] = '\0';
+        if (fseek(file, 0, SEEK_END) != 0)
+        {
+            fprintf(stderr, "Failed to seek script file '%s'.\n", opts.script_file);
+            fclose(file);
+            wisp_cli_options_free(&opts);
+            return 1;
+        }
+        long flen = ftell(file);
+        if (flen < 0)
+        {
+            fprintf(stderr, "Failed to get file length for '%s'.\n", opts.script_file);
+            fclose(file);
+            wisp_cli_options_free(&opts);
+            return 1;
+        }
+        rewind(file);
+        char *source = malloc((size_t)flen + 1);
+        if (!source)
+        {
+            fprintf(stderr, "Out of memory reading script file.\n");
+            fclose(file);
+            wisp_cli_options_free(&opts);
+            return 1;
+        }
+        size_t nread = fread(source, 1, (size_t)flen, file);
+        if (nread != (size_t)flen)
+        {
+            fprintf(stderr, "Failed to read script file '%s'.\n", opts.script_file);
+            free(source);
+            fclose(file);
+            wisp_cli_options_free(&opts);
+            return 1;
+        }
+        source[flen] = '\0';
         fclose(file);
 
-        // Tokenize and interpret (original logic)
+        // --- Tokenize and interpret ---
         Token *token = NULL;
         int first = 1;
         while ((token = get_next_token(first ? source : NULL)) && token->type != TOKEN_EOF)

@@ -4,7 +4,7 @@ set -e
 
 # Variables
 PKG_NAME=wisp
-PKG_VERSION=0.2.0
+PKG_VERSION=0.2.1
 BUILD_DIR=build
 PKG_DIR=packaging
 DEB_DIR=$PKG_DIR/${PKG_NAME}_${PKG_VERSION}_amd64

@@ -1,5 +1,5 @@
 CMakeFiles/wisp.dir/src/main.c.o: \
-  /home/circuit0/Workshop/learnig/wisp/src/main.c /usr/include/time.h \
+  /home/circuit0/Workshop/learnig/wisp/src/main.c /usr/include/errno.h \
   /usr/include/features.h /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -7,6 +7,10 @@ CMakeFiles/wisp.dir/src/main.c.o: \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h /usr/include/time.h \
   /usr/lib/llvm-19/lib/clang/19/include/stddef.h \
   /usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h \
   /usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h \
