@@ -51,3 +51,26 @@ set(LLVM_LINK_COMPONENTS
 
 llvm_map_components_to_libnames(llvm_libs ${LLVM_LINK_COMPONENTS})
 target_link_libraries(wisp ${llvm_libs})
+
+# Install rules for CMake (for packaging and system install)
+install(TARGETS wisp
+    RUNTIME DESTINATION bin
+)
+install(DIRECTORY src/include/ DESTINATION include/wisp FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY src/lexer/ DESTINATION include/wisp/lexer FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY src/parser/ DESTINATION include/wisp/parser FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY src/codegen/ DESTINATION include/wisp/codegen FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY src/runtime/ DESTINATION include/wisp/runtime FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY src/modules/ DESTINATION include/wisp/modules FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY src/utils/ DESTINATION include/wisp/utils FILES_MATCHING PATTERN "*.h")
+
+
+# Optionally install documentation (Doxygen HTML)
+install(DIRECTORY docs/doxygen/html/ DESTINATION share/doc/wisp/html OPTIONAL)
+
+# Custom target to build a .deb package using the packaging/install.sh script
+add_custom_target(deb
+    COMMAND bash ${CMAKE_SOURCE_DIR}/packaging/install.sh
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    COMMENT "Build Debian .deb package using packaging/install.sh"
+)

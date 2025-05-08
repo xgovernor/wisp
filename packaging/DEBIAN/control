@@ -1,0 +1,8 @@
+Package: wisp
+Version: 0.1.0
+Section: interpreters
+Priority: optional
+Architecture: amd64
+Maintainer: Wisp Team <maintainer@example.com>
+Description: Wisp Language Interpreter
+ A modular, maintainable interpreter for the Wisp language.

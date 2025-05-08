@@ -1,9 +1,12 @@
-build/
+
+# Build and CMake artifacts
+/build/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
 compile_commands.json
+install_manifest.txt
 *.o
 *.obj
 *.so
@@ -15,6 +18,33 @@ compile_commands.json
 
 # Doxygen output
 docs/doxygen/
+
+# Debian packaging output
+packaging/wisp_*/
+wisp-*.deb
+
+# Editor/OS files
+*.swp
+*.swo
+*~
+.DS_Store
+.vscode/
+.idea/
+*.user
+*.bak
+
+# Test output
+*.gcda
+*.gcno
+*.gcov
+
+# Python cache (if any)
+__pycache__/
+*.pyc
+
+# Misc
+*.tmp
+*.old
 
 # Editor/OS files
 *.swp
