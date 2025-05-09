@@ -4,12 +4,14 @@
 #include "lexer.h"
 #include "symbol_table.h"
 #include "../utils/utils.h"
+#include "../utils/error.h"
 
 int wisp_interpret(const char *source, const char *filename)
 {
+    (void)filename; // Mark unused for now
     if (!source)
     {
-        fprintf(stderr, "No source code provided to interpreter.\n");
+        WISP_ERROR("No source code provided to interpreter.");
         return 1;
     }
     Token *token = NULL;
@@ -25,7 +27,7 @@ int wisp_interpret(const char *source, const char *filename)
             Token *name_token = get_next_token(NULL);
             if (!name_token || name_token->type != TOKEN_IDENTIFIER)
             {
-                fprintf(stderr, "Syntax error: expected variable name after let/constant\n");
+                WISP_ERROR("Syntax error: expected variable name after let/constant");
                 if (name_token)
                     free_token(name_token);
                 had_error = 1;
@@ -37,7 +39,7 @@ int wisp_interpret(const char *source, const char *filename)
             Token *typedef_token = get_next_token(NULL);
             if (!typedef_token || typedef_token->type != TOKEN_TYPEDEF)
             {
-                fprintf(stderr, "Syntax error: expected type definition in () after variable name\n");
+                WISP_ERROR("Syntax error: expected type definition in () after variable name");
                 if (typedef_token)
                     free_token(typedef_token);
                 had_error = 1;
@@ -49,7 +51,7 @@ int wisp_interpret(const char *source, const char *filename)
             Token *is_token = get_next_token(NULL);
             if (!is_token || is_token->type != TOKEN_IS)
             {
-                fprintf(stderr, "Syntax error: expected 'is' after type definition\n");
+                WISP_ERROR("Syntax error: expected 'is' after type definition");
                 if (is_token)
                     free_token(is_token);
                 had_error = 1;
@@ -59,7 +61,7 @@ int wisp_interpret(const char *source, const char *filename)
             Token *value_token = get_next_token(NULL);
             if (!value_token || (value_token->type != TOKEN_STRING && value_token->type != TOKEN_NUMBER && value_token->type != TOKEN_IDENTIFIER))
             {
-                fprintf(stderr, "Syntax error: expected value after 'is'\n");
+                WISP_ERROR("Syntax error: expected value after 'is'");
                 if (value_token)
                     free_token(value_token);
                 had_error = 1;
@@ -85,7 +87,7 @@ int wisp_interpret(const char *source, const char *filename)
             }
             else
             {
-                fprintf(stderr, "\033[31mSyntax error: expected string after show\033[0m\n");
+                WISP_ERROR("Syntax error: expected string after show");
                 if (string_token)
                     free_token(string_token);
                 had_error = 1;

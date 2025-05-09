@@ -2,7 +2,10 @@ cmake_minimum_required(VERSION 3.10)
 
 project(Wisp)
 
+
+# Enable strict compiler warnings and treat warnings as errors
 set(CMAKE_C_STANDARD 11)
+add_compile_options(-Wall -Wextra -Werror)
 
 include_directories(src/include)
 
