@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -I/home/circuit0/Workshop/learnig/wisp/src/lexer -I/home/circuit0/Workshop/learnig/wisp/src/lexer/../include -I/home/circuit0/Workshop/learnig/wisp/src/parser -I/home/circuit0/Workshop/learnig/wisp/src/parser/../include -I/home/circuit0/Workshop/learnig/wisp/src/codegen -I/home/circuit0/Workshop/learnig/wisp/src/codegen/../include -I/home/circuit0/Workshop/learnig/wisp/src/runtime -I/home/circuit0/Workshop/learnig/wisp/src/runtime/../include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table
 
-C_FLAGS = -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+C_FLAGS = -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Werror
 

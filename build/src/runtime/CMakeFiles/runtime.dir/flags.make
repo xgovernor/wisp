@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/runtime -I/home/circuit0/Workshop/learnig/wisp/src/runtime/../include
 
-C_FLAGS = -g -std=gnu11
+C_FLAGS = -g -std=gnu11 -Wall -Wextra -Werror
 

@@ -1,61 +1,73 @@
 [
 {
   "directory": "/home/circuit0/Workshop/learnig/wisp/build",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -I/home/circuit0/Workshop/learnig/wisp/src/lexer -I/home/circuit0/Workshop/learnig/wisp/src/lexer/../include -I/home/circuit0/Workshop/learnig/wisp/src/parser -I/home/circuit0/Workshop/learnig/wisp/src/parser/../include -I/home/circuit0/Workshop/learnig/wisp/src/codegen -I/home/circuit0/Workshop/learnig/wisp/src/codegen/../include -I/home/circuit0/Workshop/learnig/wisp/src/runtime -I/home/circuit0/Workshop/learnig/wisp/src/runtime/../include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -o CMakeFiles/wisp.dir/src/main.c.o -c /home/circuit0/Workshop/learnig/wisp/src/main.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -I/home/circuit0/Workshop/learnig/wisp/src/lexer -I/home/circuit0/Workshop/learnig/wisp/src/lexer/../include -I/home/circuit0/Workshop/learnig/wisp/src/parser -I/home/circuit0/Workshop/learnig/wisp/src/parser/../include -I/home/circuit0/Workshop/learnig/wisp/src/codegen -I/home/circuit0/Workshop/learnig/wisp/src/codegen/../include -I/home/circuit0/Workshop/learnig/wisp/src/runtime -I/home/circuit0/Workshop/learnig/wisp/src/runtime/../include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Werror -o CMakeFiles/wisp.dir/src/main.c.o -c /home/circuit0/Workshop/learnig/wisp/src/main.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/main.c",
   "output": "CMakeFiles/wisp.dir/src/main.c.o"
 },
 {
   "directory": "/home/circuit0/Workshop/learnig/wisp/build",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -I/home/circuit0/Workshop/learnig/wisp/src/lexer -I/home/circuit0/Workshop/learnig/wisp/src/lexer/../include -I/home/circuit0/Workshop/learnig/wisp/src/parser -I/home/circuit0/Workshop/learnig/wisp/src/parser/../include -I/home/circuit0/Workshop/learnig/wisp/src/codegen -I/home/circuit0/Workshop/learnig/wisp/src/codegen/../include -I/home/circuit0/Workshop/learnig/wisp/src/runtime -I/home/circuit0/Workshop/learnig/wisp/src/runtime/../include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -o CMakeFiles/wisp.dir/src/wisp.c.o -c /home/circuit0/Workshop/learnig/wisp/src/wisp.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -I/home/circuit0/Workshop/learnig/wisp/src/lexer -I/home/circuit0/Workshop/learnig/wisp/src/lexer/../include -I/home/circuit0/Workshop/learnig/wisp/src/parser -I/home/circuit0/Workshop/learnig/wisp/src/parser/../include -I/home/circuit0/Workshop/learnig/wisp/src/codegen -I/home/circuit0/Workshop/learnig/wisp/src/codegen/../include -I/home/circuit0/Workshop/learnig/wisp/src/runtime -I/home/circuit0/Workshop/learnig/wisp/src/runtime/../include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Werror -o CMakeFiles/wisp.dir/src/wisp.c.o -c /home/circuit0/Workshop/learnig/wisp/src/wisp.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/wisp.c",
   "output": "CMakeFiles/wisp.dir/src/wisp.c.o"
 },
 {
+  "directory": "/home/circuit0/Workshop/learnig/wisp/build",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/usr/lib/llvm-19/include -I/home/circuit0/Workshop/learnig/wisp/src/lexer -I/home/circuit0/Workshop/learnig/wisp/src/lexer/../include -I/home/circuit0/Workshop/learnig/wisp/src/parser -I/home/circuit0/Workshop/learnig/wisp/src/parser/../include -I/home/circuit0/Workshop/learnig/wisp/src/codegen -I/home/circuit0/Workshop/learnig/wisp/src/codegen/../include -I/home/circuit0/Workshop/learnig/wisp/src/runtime -I/home/circuit0/Workshop/learnig/wisp/src/runtime/../include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table -g -std=gnu11   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Werror -o CMakeFiles/wisp.dir/src/modules/interpreter.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/interpreter.c",
+  "file": "/home/circuit0/Workshop/learnig/wisp/src/modules/interpreter.c",
+  "output": "CMakeFiles/wisp.dir/src/modules/interpreter.c.o"
+},
+{
   "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/utils",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table -g -std=gnu11 -o CMakeFiles/utils.dir/utils.c.o -c /home/circuit0/Workshop/learnig/wisp/src/utils/utils.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/utils.dir/utils.c.o -c /home/circuit0/Workshop/learnig/wisp/src/utils/utils.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/utils/utils.c",
   "output": "src/utils/CMakeFiles/utils.dir/utils.c.o"
 },
 {
+  "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/utils",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/utils.dir/error.c.o -c /home/circuit0/Workshop/learnig/wisp/src/utils/error.c",
+  "file": "/home/circuit0/Workshop/learnig/wisp/src/utils/error.c",
+  "output": "src/utils/CMakeFiles/utils.dir/error.c.o"
+},
+{
   "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/lexer",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/lexer -I/home/circuit0/Workshop/learnig/wisp/src/lexer/../include -g -std=gnu11 -o CMakeFiles/lexer.dir/lexer.c.o -c /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/lexer -I/home/circuit0/Workshop/learnig/wisp/src/lexer/../include -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/lexer.dir/lexer.c.o -c /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c",
   "output": "src/lexer/CMakeFiles/lexer.dir/lexer.c.o"
 },
 {
   "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/parser",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/parser -I/home/circuit0/Workshop/learnig/wisp/src/parser/../include -g -std=gnu11 -o CMakeFiles/parser.dir/parser.c.o -c /home/circuit0/Workshop/learnig/wisp/src/parser/parser.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/parser -I/home/circuit0/Workshop/learnig/wisp/src/parser/../include -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/parser.dir/parser.c.o -c /home/circuit0/Workshop/learnig/wisp/src/parser/parser.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/parser/parser.c",
   "output": "src/parser/CMakeFiles/parser.dir/parser.c.o"
 },
 {
   "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/codegen",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/codegen -I/home/circuit0/Workshop/learnig/wisp/src/codegen/../include -g -std=gnu11 -o CMakeFiles/codegen.dir/codegen.c.o -c /home/circuit0/Workshop/learnig/wisp/src/codegen/codegen.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/codegen -I/home/circuit0/Workshop/learnig/wisp/src/codegen/../include -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/codegen.dir/codegen.c.o -c /home/circuit0/Workshop/learnig/wisp/src/codegen/codegen.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/codegen/codegen.c",
   "output": "src/codegen/CMakeFiles/codegen.dir/codegen.c.o"
 },
 {
   "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/runtime",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/runtime -I/home/circuit0/Workshop/learnig/wisp/src/runtime/../include -g -std=gnu11 -o CMakeFiles/runtime.dir/runtime.c.o -c /home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/runtime -I/home/circuit0/Workshop/learnig/wisp/src/runtime/../include -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/runtime.dir/runtime.c.o -c /home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c",
   "output": "src/runtime/CMakeFiles/runtime.dir/runtime.c.o"
 },
 {
   "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/modules",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -g -std=gnu11 -o CMakeFiles/modules.dir/import.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/import.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/modules.dir/import.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/import.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/modules/import.c",
   "output": "src/modules/CMakeFiles/modules.dir/import.c.o"
 },
 {
   "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/modules",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -g -std=gnu11 -o CMakeFiles/modules.dir/symbol_table.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/modules.dir/symbol_table.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c",
   "output": "src/modules/CMakeFiles/modules.dir/symbol_table.c.o"
 },
 {
   "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/modules",
-  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -g -std=gnu11 -o CMakeFiles/modules.dir/cli.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/modules -I/home/circuit0/Workshop/learnig/wisp/src/modules/../include -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/modules.dir/cli.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/modules/cli.c",
   "output": "src/modules/CMakeFiles/modules.dir/cli.c.o"
 }

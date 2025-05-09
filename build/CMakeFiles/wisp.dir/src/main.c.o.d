@@ -73,4 +73,9 @@ CMakeFiles/wisp.dir/src/main.c.o: \
   /home/circuit0/Workshop/learnig/wisp/src/modules/cli.h \
   /usr/lib/llvm-19/lib/clang/19/include/stdbool.h \
   /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h \
-  /home/circuit0/Workshop/learnig/wisp/src/utils/utils.h
+  /home/circuit0/Workshop/learnig/wisp/src/utils/utils.h \
+  /home/circuit0/Workshop/learnig/wisp/src/modules/interpreter.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_header_macro.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_ptrdiff_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_max_align_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_offsetof.h

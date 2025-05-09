@@ -175,6 +175,30 @@ utils/fast:
 	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/build
 .PHONY : utils/fast
 
+error.o: error.c.o
+.PHONY : error.o
+
+# target to build an object file
+error.c.o:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/error.c.o
+.PHONY : error.c.o
+
+error.i: error.c.i
+.PHONY : error.i
+
+# target to preprocess a source file
+error.c.i:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/error.c.i
+.PHONY : error.c.i
+
+error.s: error.c.s
+.PHONY : error.s
+
+# target to generate assembly for a file
+error.c.s:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/error.c.s
+.PHONY : error.c.s
+
 utils.o: utils.c.o
 .PHONY : utils.o
 
@@ -212,6 +236,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... utils"
+	@echo "... error.o"
+	@echo "... error.i"
+	@echo "... error.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

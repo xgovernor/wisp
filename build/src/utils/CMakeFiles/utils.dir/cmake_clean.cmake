@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/utils.dir/error.c.o"
+  "CMakeFiles/utils.dir/error.c.o.d"
   "CMakeFiles/utils.dir/utils.c.o"
   "CMakeFiles/utils.dir/utils.c.o.d"
   "libutils.a"

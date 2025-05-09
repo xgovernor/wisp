@@ -367,6 +367,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/modules/interpreter.o: src/modules/interpreter.c.o
+.PHONY : src/modules/interpreter.o
+
+# target to build an object file
+src/modules/interpreter.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/modules/interpreter.c.o
+.PHONY : src/modules/interpreter.c.o
+
+src/modules/interpreter.i: src/modules/interpreter.c.i
+.PHONY : src/modules/interpreter.i
+
+# target to preprocess a source file
+src/modules/interpreter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/modules/interpreter.c.i
+.PHONY : src/modules/interpreter.c.i
+
+src/modules/interpreter.s: src/modules/interpreter.c.s
+.PHONY : src/modules/interpreter.s
+
+# target to generate assembly for a file
+src/modules/interpreter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/src/modules/interpreter.c.s
+.PHONY : src/modules/interpreter.c.s
+
 src/wisp.o: src/wisp.c.o
 .PHONY : src/wisp.o
 
@@ -420,6 +444,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/modules/interpreter.o"
+	@echo "... src/modules/interpreter.i"
+	@echo "... src/modules/interpreter.s"
 	@echo "... src/wisp.o"
 	@echo "... src/wisp.i"
 	@echo "... src/wisp.s"
