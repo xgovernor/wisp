@@ -17,23 +17,18 @@
  * @struct Variable
  * @brief Represents a variable in the Wisp symbol table.
  */
-typedef struct
+
+typedef struct Variable
 {
-    char name[MAX_NAME_LEN];   /**< Variable name */
+    const char *name;          /**< Interned variable name */
     char type[MAX_TYPE_LEN];   /**< Variable type */
     char value[MAX_VALUE_LEN]; /**< Variable value as string */
     int is_constant;           /**< 1 if constant, 0 if mutable */
+    struct Variable *next;     /**< Next in hash bucket */
 } Variable;
 
-/**
- * @brief The global symbol table array.
- */
-extern Variable symbol_table[MAX_VARIABLES];
-
-/**
- * @brief The current number of variables in the symbol table.
- */
-extern int symbol_count;
+void symbol_table_init(void);
+void symbol_table_cleanup(void);
 
 /**
  * @brief Find a variable by name in the symbol table.

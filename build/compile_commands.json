@@ -30,6 +30,12 @@
   "output": "src/utils/CMakeFiles/utils.dir/error.c.o"
 },
 {
+  "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/utils",
+  "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/utils -I/home/circuit0/Workshop/learnig/wisp/src/utils/../include -I/home/circuit0/Workshop/learnig/wisp/src/utils/../symbol_table -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/utils.dir/intern.c.o -c /home/circuit0/Workshop/learnig/wisp/src/utils/intern.c",
+  "file": "/home/circuit0/Workshop/learnig/wisp/src/utils/intern.c",
+  "output": "src/utils/CMakeFiles/utils.dir/intern.c.o"
+},
+{
   "directory": "/home/circuit0/Workshop/learnig/wisp/build/src/lexer",
   "command": "/usr/bin/clang  -I/home/circuit0/Workshop/learnig/wisp/src/include -I/home/circuit0/Workshop/learnig/wisp/src/lexer -I/home/circuit0/Workshop/learnig/wisp/src/lexer/../include -g -std=gnu11 -Wall -Wextra -Werror -o CMakeFiles/lexer.dir/lexer.c.o -c /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c",
   "file": "/home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c",

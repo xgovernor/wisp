@@ -97,19 +97,35 @@ src/utils/CMakeFiles/utils.dir/error.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/utils.dir/error.c.s"
 	cd /home/circuit0/Workshop/learnig/wisp/build/src/utils && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/utils/error.c -o CMakeFiles/utils.dir/error.c.s
 
+src/utils/CMakeFiles/utils.dir/intern.c.o: src/utils/CMakeFiles/utils.dir/flags.make
+src/utils/CMakeFiles/utils.dir/intern.c.o: /home/circuit0/Workshop/learnig/wisp/src/utils/intern.c
+src/utils/CMakeFiles/utils.dir/intern.c.o: src/utils/CMakeFiles/utils.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/utils/CMakeFiles/utils.dir/intern.c.o"
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/utils && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/utils/CMakeFiles/utils.dir/intern.c.o -MF CMakeFiles/utils.dir/intern.c.o.d -o CMakeFiles/utils.dir/intern.c.o -c /home/circuit0/Workshop/learnig/wisp/src/utils/intern.c
+
+src/utils/CMakeFiles/utils.dir/intern.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/utils.dir/intern.c.i"
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/utils && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/utils/intern.c > CMakeFiles/utils.dir/intern.c.i
+
+src/utils/CMakeFiles/utils.dir/intern.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/utils.dir/intern.c.s"
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/utils && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/utils/intern.c -o CMakeFiles/utils.dir/intern.c.s
+
 # Object files for target utils
 utils_OBJECTS = \
 "CMakeFiles/utils.dir/utils.c.o" \
-"CMakeFiles/utils.dir/error.c.o"
+"CMakeFiles/utils.dir/error.c.o" \
+"CMakeFiles/utils.dir/intern.c.o"
 
 # External object files for target utils
 utils_EXTERNAL_OBJECTS =
 
 src/utils/libutils.a: src/utils/CMakeFiles/utils.dir/utils.c.o
 src/utils/libutils.a: src/utils/CMakeFiles/utils.dir/error.c.o
+src/utils/libutils.a: src/utils/CMakeFiles/utils.dir/intern.c.o
 src/utils/libutils.a: src/utils/CMakeFiles/utils.dir/build.make
 src/utils/libutils.a: src/utils/CMakeFiles/utils.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libutils.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libutils.a"
 	cd /home/circuit0/Workshop/learnig/wisp/build/src/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean_target.cmake
 	cd /home/circuit0/Workshop/learnig/wisp/build/src/utils && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utils.dir/link.txt --verbose=$(VERBOSE)
 

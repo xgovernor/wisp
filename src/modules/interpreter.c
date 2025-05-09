@@ -34,7 +34,8 @@ int wisp_interpret(const char *source, const char *filename)
                 continue;
             }
             char varname[MAX_NAME_LEN];
-            strncpy(varname, name_token->value, MAX_NAME_LEN);
+            strncpy(varname, name_token->value, MAX_NAME_LEN - 1);
+            varname[MAX_NAME_LEN - 1] = '\0';
             free_token(name_token);
             Token *typedef_token = get_next_token(NULL);
             if (!typedef_token || typedef_token->type != TOKEN_TYPEDEF)

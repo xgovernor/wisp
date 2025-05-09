@@ -199,6 +199,30 @@ error.c.s:
 	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/error.c.s
 .PHONY : error.c.s
 
+intern.o: intern.c.o
+.PHONY : intern.o
+
+# target to build an object file
+intern.c.o:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/intern.c.o
+.PHONY : intern.c.o
+
+intern.i: intern.c.i
+.PHONY : intern.i
+
+# target to preprocess a source file
+intern.c.i:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/intern.c.i
+.PHONY : intern.c.i
+
+intern.s: intern.c.s
+.PHONY : intern.s
+
+# target to generate assembly for a file
+intern.c.s:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/intern.c.s
+.PHONY : intern.c.s
+
 utils.o: utils.c.o
 .PHONY : utils.o
 
@@ -239,6 +263,9 @@ help:
 	@echo "... error.o"
 	@echo "... error.i"
 	@echo "... error.s"
+	@echo "... intern.o"
+	@echo "... intern.i"
+	@echo "... intern.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

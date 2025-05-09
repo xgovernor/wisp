@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/circuit0/Workshop/learnig/wisp/src/utils/error.c" "src/utils/CMakeFiles/utils.dir/error.c.o" "gcc" "src/utils/CMakeFiles/utils.dir/error.c.o.d"
+  "/home/circuit0/Workshop/learnig/wisp/src/utils/intern.c" "src/utils/CMakeFiles/utils.dir/intern.c.o" "gcc" "src/utils/CMakeFiles/utils.dir/intern.c.o.d"
   "/home/circuit0/Workshop/learnig/wisp/src/utils/utils.c" "src/utils/CMakeFiles/utils.dir/utils.c.o" "gcc" "src/utils/CMakeFiles/utils.dir/utils.c.o.d"
   )
 

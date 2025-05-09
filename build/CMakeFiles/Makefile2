@@ -200,12 +200,12 @@ CMakeFiles/wisp.dir/all: src/runtime/CMakeFiles/runtime.dir/all
 CMakeFiles/wisp.dir/all: src/modules/CMakeFiles/modules.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=17,18,19,20 "Built target wisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=18,19,20,21 "Built target wisp"
 .PHONY : CMakeFiles/wisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/wisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/wisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
 .PHONY : CMakeFiles/wisp.dir/rule
@@ -408,12 +408,12 @@ CMakeFiles/deb.dir/clean:
 src/utils/CMakeFiles/utils.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=14,15,16 "Built target utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=14,15,16,17 "Built target utils"
 .PHONY : src/utils/CMakeFiles/utils.dir/all
 
 # Build rule for subdir invocation for target.
 src/utils/CMakeFiles/utils.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/CMakeFiles/utils.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
 .PHONY : src/utils/CMakeFiles/utils.dir/rule

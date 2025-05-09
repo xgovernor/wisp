@@ -55,6 +55,7 @@ int main(int argc, char **argv)
         return 0;
     }
 
+    symbol_table_init();
     printf("\033[36mWelcome to %s v%s.\033[0m\n", WISP_NAME, WISP_VERSION);
 
     struct rusage usage_start, usage_end;
@@ -79,6 +80,7 @@ int main(int argc, char **argv)
         // TODO: interpret code in opts.command
         printf("[Stub] Would execute: %s\n", opts.command);
         wisp_cli_options_free(&opts);
+        symbol_table_cleanup();
         return 0;
     }
 
@@ -88,6 +90,7 @@ int main(int argc, char **argv)
         // TODO: launch REPL
         printf("[Stub] Would launch REPL\n");
         wisp_cli_options_free(&opts);
+        symbol_table_cleanup();
         return 0;
     }
 
@@ -101,6 +104,7 @@ int main(int argc, char **argv)
         {
             fprintf(stderr, "Failed to open script file '%s': %s\n", opts.script_file, strerror(errno));
             wisp_cli_options_free(&opts);
+            symbol_table_cleanup();
             return 1;
         }
         if (fseek(file, 0, SEEK_END) != 0)
@@ -108,6 +112,7 @@ int main(int argc, char **argv)
             fprintf(stderr, "Failed to seek script file '%s'.\n", opts.script_file);
             fclose(file);
             wisp_cli_options_free(&opts);
+            symbol_table_cleanup();
             return 1;
         }
         long flen = ftell(file);
@@ -116,6 +121,7 @@ int main(int argc, char **argv)
             fprintf(stderr, "Failed to get file length for '%s'.\n", opts.script_file);
             fclose(file);
             wisp_cli_options_free(&opts);
+            symbol_table_cleanup();
             return 1;
         }
         rewind(file);
@@ -125,6 +131,7 @@ int main(int argc, char **argv)
             fprintf(stderr, "Out of memory reading script file.\n");
             fclose(file);
             wisp_cli_options_free(&opts);
+            symbol_table_cleanup();
             return 1;
         }
         size_t nread = fread(source, 1, (size_t)flen, file);
@@ -134,6 +141,7 @@ int main(int argc, char **argv)
             free(source);
             fclose(file);
             wisp_cli_options_free(&opts);
+            symbol_table_cleanup();
             return 1;
         }
         source[flen] = '\0';
@@ -145,6 +153,7 @@ int main(int argc, char **argv)
         if (interp_result != 0)
         {
             wisp_cli_options_free(&opts);
+            symbol_table_cleanup();
             return interp_result;
         }
     }
@@ -158,5 +167,6 @@ int main(int argc, char **argv)
         printf("\033[33m[Stats] Time: %.6f sec | Max Memory: %ld KB\033[0m\n", elapsed, mem_kb);
     }
     wisp_cli_options_free(&opts);
+    symbol_table_cleanup();
     return 0;
 }
