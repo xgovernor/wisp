@@ -25,7 +25,7 @@ add_subdirectory(src/runtime)
 add_subdirectory(src/modules)
 
 # Main executable
-add_executable(wisp src/main.c src/wisp.c)
+add_executable(wisp src/main.c src/wisp.c src/modules/interpreter.c)
 
 # Link all modules (order may matter if there are dependencies)
 target_link_libraries(wisp
