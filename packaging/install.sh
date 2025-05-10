@@ -27,6 +27,6 @@ cp -r $PKG_DIR/DEBIAN/* "$DEB_DIR/DEBIAN/"
 fakeroot dpkg-deb --build "$DEB_DIR"
 
 # Move the .deb to the project root
-mv "$DEB_DIR.deb" "$PKG_NAME-$PKG_VERSION-amd64.deb"
+mv "$DEB_DIR.deb" "$PKG_NAME-$PKG_VERSION-dev-amd64.deb"
 
 echo "\nDebian package created: $PKG_NAME-$PKG_VERSION-amd64.deb"
