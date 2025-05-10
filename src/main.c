@@ -1,7 +1,7 @@
 // Wisp Interpreter main entry point
 #define _POSIX_C_SOURCE 200809L
 #define WISP_NAME "Wisp"
-#define WISP_VERSION "0.2.2"
+#define WISP_VERSION "0.2.3"
 // #define WISP_AUTHOR "Abu Taher Muhammad"
 #include <errno.h>
 /**
@@ -98,6 +98,18 @@ int main(int argc, char **argv)
 
     if (opts.script_file)
     {
+        // Only allow .wisp files
+        const char *dot = strrchr(opts.script_file, '.');
+        if (!dot || strcmp(dot, ".wisp") != 0)
+        {
+            fprintf(stderr, "ErrorCode: UnknownFileExtension\n");
+            fprintf(stderr, "Error: Invalid file extension '%s'.\n", dot ? dot : "NULL");
+            fprintf(stderr, "\n");
+            fprintf(stderr, "Help:\n  - Only .wisp files are supported.\n");
+            wisp_cli_options_free(&opts);
+            symbol_table_cleanup();
+            return 1;
+        }
         // --- Read the script file into memory safely ---
         FILE *file = fopen(opts.script_file, "r");
         if (!file)
