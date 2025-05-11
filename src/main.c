@@ -1,7 +1,7 @@
 // Wisp Interpreter main entry point
 #define _POSIX_C_SOURCE 200809L
 #define WISP_NAME "Wisp"
-#define WISP_VERSION "0.3.6"
+#define WISP_VERSION "0.3.7"
 // #define WISP_AUTHOR "Abu Taher Muhammad"
 #include <errno.h>
 /**
@@ -85,6 +85,24 @@ int main(int argc, char **argv)
         }
     }
 
+    // Handle output redirection if -o/--output is given
+    FILE *original_stdout = NULL;
+    FILE *output_file_handle = NULL;
+    if (opts.output_file)
+    {
+        output_file_handle = fopen(opts.output_file, "w");
+        if (!output_file_handle)
+        {
+            fprintf(stderr, "wisp: error: could not open output file '%s'\n", opts.output_file);
+            wisp_cli_options_free(&opts);
+            symbol_table_cleanup();
+            return 1;
+        }
+        original_stdout = stdout;
+        fflush(stdout);
+        stdout = output_file_handle;
+    }
+
     // Handle -c/--command (execute code string)
 
     if (opts.command)
@@ -93,6 +111,12 @@ int main(int argc, char **argv)
         if (interp_result != 0)
         {
             fprintf(stderr, "wisp: error: failed to execute command string\n");
+        }
+        if (output_file_handle)
+        {
+            fflush(stdout);
+            stdout = original_stdout;
+            fclose(output_file_handle);
         }
         wisp_cli_options_free(&opts);
         symbol_table_cleanup();
@@ -104,6 +128,12 @@ int main(int argc, char **argv)
     {
         // TODO: launch REPL
         WISP_LOGI("[Stub] Would launch REPL");
+        if (output_file_handle)
+        {
+            fflush(stdout);
+            stdout = original_stdout;
+            fclose(output_file_handle);
+        }
         wisp_cli_options_free(&opts);
         symbol_table_cleanup();
         return 0;
@@ -123,6 +153,12 @@ int main(int argc, char **argv)
                 "Only files with the '.wisp' extension are supported by the Wisp interpreter.",
                 "    - Rename your file to use the '.wisp' extension.\n    - Ensure you are opening the correct file type for Wisp.",
                 "https://wisp-lang.org/docs/file-formats");
+            if (output_file_handle)
+            {
+                fflush(stdout);
+                stdout = original_stdout;
+                fclose(output_file_handle);
+            }
             wisp_cli_options_free(&opts);
             symbol_table_cleanup();
             return 1;
@@ -132,6 +168,12 @@ int main(int argc, char **argv)
         if (!file)
         {
             WISP_LOGE("Failed to open script file '%s': %s", opts.script_file, strerror(errno));
+            if (output_file_handle)
+            {
+                fflush(stdout);
+                stdout = original_stdout;
+                fclose(output_file_handle);
+            }
             wisp_cli_options_free(&opts);
             symbol_table_cleanup();
             return 1;
@@ -140,6 +182,12 @@ int main(int argc, char **argv)
         {
             WISP_LOGE("Failed to seek script file '%s'.", opts.script_file);
             fclose(file);
+            if (output_file_handle)
+            {
+                fflush(stdout);
+                stdout = original_stdout;
+                fclose(output_file_handle);
+            }
             wisp_cli_options_free(&opts);
             symbol_table_cleanup();
             return 1;
@@ -149,6 +197,12 @@ int main(int argc, char **argv)
         {
             WISP_LOGE("Failed to get file length for '%s'.", opts.script_file);
             fclose(file);
+            if (output_file_handle)
+            {
+                fflush(stdout);
+                stdout = original_stdout;
+                fclose(output_file_handle);
+            }
             wisp_cli_options_free(&opts);
             symbol_table_cleanup();
             return 1;
@@ -159,6 +213,12 @@ int main(int argc, char **argv)
         {
             WISP_LOGE("Out of memory reading script file.");
             fclose(file);
+            if (output_file_handle)
+            {
+                fflush(stdout);
+                stdout = original_stdout;
+                fclose(output_file_handle);
+            }
             wisp_cli_options_free(&opts);
             symbol_table_cleanup();
             return 1;
@@ -169,6 +229,12 @@ int main(int argc, char **argv)
             WISP_LOGE("Failed to read script file '%s'.", opts.script_file);
             free(source);
             fclose(file);
+            if (output_file_handle)
+            {
+                fflush(stdout);
+                stdout = original_stdout;
+                fclose(output_file_handle);
+            }
             wisp_cli_options_free(&opts);
             symbol_table_cleanup();
             return 1;
@@ -181,6 +247,12 @@ int main(int argc, char **argv)
         free(source);
         if (interp_result != 0)
         {
+            if (output_file_handle)
+            {
+                fflush(stdout);
+                stdout = original_stdout;
+                fclose(output_file_handle);
+            }
             wisp_cli_options_free(&opts);
             symbol_table_cleanup();
             return interp_result;
@@ -207,6 +279,12 @@ int main(int argc, char **argv)
         fprintf(stderr, "  Page faults : %10ld\n", page_faults);
         fprintf(stderr, "  Swaps       : %10ld\n", swaps);
         fprintf(stderr,   "==================\n");
+    }
+    if (output_file_handle)
+    {
+        fflush(stdout);
+        stdout = original_stdout;
+        fclose(output_file_handle);
     }
     wisp_cli_options_free(&opts);
     symbol_table_cleanup();
