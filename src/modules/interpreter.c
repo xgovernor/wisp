@@ -183,8 +183,18 @@ int wisp_interpret(const char *source, const char *filename)
                 }
                 else if (value_token->type == TOKEN_STRING || value_token->type == TOKEN_NUMBER || value_token->type == TOKEN_IDENTIFIER)
                 {
-                    add_variable(varname, vartype, value_token->value, is_const);
-                    assigned = 1;
+                    // Check for type mismatch before assignment (redundant with symbol_table, but gives better error location)
+                    Variable *existing = find_variable(varname);
+                    if (existing && strncmp(existing->type, vartype, MAX_TYPE_LEN) != 0)
+                    {
+                        WISP_ERROR("Type error: cannot assign value of type '%s' to variable '%s' of type '%s'", vartype, varname, existing->type);
+                        assigned = 1;
+                    }
+                    else
+                    {
+                        add_variable(varname, vartype, value_token->value, is_const);
+                        assigned = 1;
+                    }
                 }
             }
             else if (assign_tok_count == 3 &&

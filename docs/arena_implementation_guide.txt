@@ -1,0 +1,71 @@
+Wisp Arena Allocator Implementation Guide
+========================================
+
+Overview
+--------
+The arena allocator in Wisp (`arena.c`/`arena.h`) is a simple, high-performance memory management utility designed for fast, bulk allocation and deallocation. It is ideal for use cases where many small objects are allocated and freed together, such as symbol tables, AST nodes, or IR structures.
+
+How It Works
+------------
+- The arena consists of a linked list of fixed-size blocks (default: 4096 bytes).
+- Allocations are done by bumping a pointer within the current block.
+- If a block does not have enough space, a new block is allocated and added to the list.
+- All memory in the arena is freed at once by destroying the arena (no per-object free).
+
+API Reference
+-------------
+- `Arena *arena_create(void);`
+  - Allocates and returns a new arena.
+- `void *arena_alloc(Arena *arena, size_t size);`
+  - Allocates `size` bytes from the arena. Returns a pointer to the memory.
+- `void arena_destroy(Arena *arena);`
+  - Frees all memory associated with the arena.
+
+Basic Usage Example
+-------------------
+```c
+#include "arena.h"
+Arena *arena = arena_create();
+MyStruct *obj = (MyStruct *)arena_alloc(arena, sizeof(MyStruct));
+// ... use obj ...
+arena_destroy(arena); // Frees all objects allocated from this arena
+```
+
+Use Cases
+---------
+- **Symbol tables:** Allocate variable entries efficiently, freeing all at once.
+- **AST/IR construction:** Build trees/graphs with many small nodes, then free all at once.
+- **Temporary allocations:** Use for scratch memory in interpreters, compilers, or event loops.
+
+Edge Cases & Considerations
+--------------------------
+- **Large allocations:**
+  - If you request an allocation larger than the block size (4096 bytes), the current implementation will still allocate a new block, but this may waste memory. For very large objects, consider allocating them separately.
+- **Alignment:**
+  - The arena does not guarantee alignment greater than `char` (1 byte). For types requiring stricter alignment, you may need to adjust the implementation.
+- **No individual free:**
+  - You cannot free individual objects. All memory is released only when `arena_destroy` is called.
+- **Memory leaks:**
+  - If you forget to call `arena_destroy`, all memory allocated by the arena will leak.
+- **Thread safety:**
+  - The arena is **not** thread-safe. Use one arena per thread or add locking if needed.
+- **Reusing arenas:**
+  - The current implementation does not support resetting/reusing an arena without freeing and reallocating blocks.
+
+Best Practices
+--------------
+- Use arenas for objects with the same lifetime.
+- Avoid using arenas for objects that need to be freed individually.
+- Always call `arena_destroy` to avoid memory leaks.
+- For debugging, consider adding statistics or logging to track allocations.
+
+Testing Edge Cases
+------------------
+- Allocate objects of various sizes (including >4096 bytes).
+- Allocate zero bytes (should return a valid pointer or NULL, but not crash).
+- Call `arena_destroy` on a fresh arena (no allocations).
+- Call `arena_destroy` multiple times (should not crash, but only the first call is valid).
+- Use after destroy (should not be done; will cause undefined behavior).
+
+---
+For more advanced use (alignment, block size tuning, or arena reuse), consider extending the implementation as needed.

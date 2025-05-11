@@ -30,6 +30,10 @@ typedef struct Variable
 void symbol_table_init(void);
 void symbol_table_cleanup(void);
 
+// For testing and advanced use: expose arena pointer (read-only)
+#include "../utils/arena.h"
+const Arena *symbol_table_get_arena(void);
+
 /**
  * @brief Find a variable by name in the symbol table.
  * @param name The variable name to search for.

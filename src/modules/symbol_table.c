@@ -1,13 +1,15 @@
 #include "symbol_table.h"
-
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "../utils/intern.h"
 #include "logger.h"
+#include "../utils/arena.h"
 
 #define SYMBOL_TABLE_SIZE 211
 static Variable *symbol_table[SYMBOL_TABLE_SIZE];
+static Arena *symbol_arena = NULL;
+#include "symbol_table.h"
 
 static unsigned long hash_varname(const char *str)
 {
@@ -22,20 +24,18 @@ void symbol_table_init(void)
 {
     for (int i = 0; i < SYMBOL_TABLE_SIZE; ++i)
         symbol_table[i] = NULL;
+    if (!symbol_arena)
+        symbol_arena = arena_create();
 }
 
 void symbol_table_cleanup(void)
 {
     for (int i = 0; i < SYMBOL_TABLE_SIZE; ++i)
-    {
-        Variable *v = symbol_table[i];
-        while (v)
-        {
-            Variable *next = v->next;
-            free(v);
-            v = next;
-        }
         symbol_table[i] = NULL;
+    if (symbol_arena)
+    {
+        arena_destroy(symbol_arena);
+        symbol_arena = NULL;
     }
 }
 
@@ -90,8 +90,12 @@ void add_variable(const char *name, const char *type, const char *value, int is_
                 WISP_LOGE("Cannot reassign to constant variable: %s", name);
                 return;
             }
-            strncpy(v->type, type, MAX_TYPE_LEN - 1);
-            v->type[MAX_TYPE_LEN - 1] = '\0';
+            // Strict type enforcement: types must match exactly
+            if (strncmp(v->type, type, MAX_TYPE_LEN) != 0)
+            {
+                WISP_LOGE("Type error: cannot assign value of type '%s' to variable '%s' of type '%s"", type, name, v->type);
+                return;
+            }
             strncpy(v->value, value, MAX_VALUE_LEN - 1);
             v->value[MAX_VALUE_LEN - 1] = '\0';
             v->is_constant = is_constant;
@@ -100,7 +104,7 @@ void add_variable(const char *name, const char *type, const char *value, int is_
         v = v->next;
     }
     // Not found, add new
-    Variable *newv = (Variable *)malloc(sizeof(Variable));
+    Variable *newv = (Variable *)arena_alloc(symbol_arena, sizeof(Variable));
     newv->name = iname;
     strncpy(newv->type, type, MAX_TYPE_LEN - 1);
     newv->type[MAX_TYPE_LEN - 1] = '\0';
@@ -109,4 +113,11 @@ void add_variable(const char *name, const char *type, const char *value, int is_
     newv->is_constant = is_constant;
     newv->next = symbol_table[h];
     symbol_table[h] = newv;
+    WISP_LOGD("Allocated variable '%s' in arena", name);
+}
+
+// Expose arena for testing/inspection
+const Arena *symbol_table_get_arena(void)
+{
+    return symbol_arena;
 }
