@@ -102,10 +102,23 @@ int main(int argc, char **argv)
         const char *dot = strrchr(opts.script_file, '.');
         if (!dot || strcmp(dot, ".wisp") != 0)
         {
-            fprintf(stderr, "ErrorCode: UnknownFileExtension\n");
-            fprintf(stderr, "Error: Invalid file extension '%s'.\n", dot ? dot : "NULL");
-            fprintf(stderr, "\n");
-            fprintf(stderr, "Help:\n  - Only .wisp files are supported.\n");
+            fprintf(stderr,
+                    "[Wisp Error] (E1001) UnknownFileExtension\n"
+                    "  File:    %s\n"
+                    "\n"
+                    "  Problem:\n"
+                    "    Unsupported file extension '%s' detected.\n"
+                    "\n"
+                    "  Details:\n"
+                    "    Only files with the '.wisp' extension are supported by the Wisp interpreter.\n"
+                    "\n"
+                    "  Suggested Fixes:\n"
+                    "    - Rename your file to use the '.wisp' extension.\n"
+                    "    - Ensure you are opening the correct file type for Wisp.\n"
+                    "\n"
+                    "  For more help, see: https://wisp-lang.org/docs/file-formats\n"
+                    "------------------------------------------------------------\n",
+                    opts.script_file, dot ? dot : "NULL");
             wisp_cli_options_free(&opts);
             symbol_table_cleanup();
             return 1;
