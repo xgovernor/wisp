@@ -1,7 +1,7 @@
 // Wisp Interpreter main entry point
 #define _POSIX_C_SOURCE 200809L
 #define WISP_NAME "Wisp"
-#define WISP_VERSION "0.3.1"
+#define WISP_VERSION "0.3.2"
 // #define WISP_AUTHOR "Abu Taher Muhammad"
 #include <errno.h>
 /**

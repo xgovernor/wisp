@@ -5,7 +5,7 @@
 #include <string.h>
 #include <getopt.h>
 
-#define WISP_VERSION "0.3.1"
+#define WISP_VERSION "0.3.2"
 
 static const struct option long_options[] = {
     {"help", no_argument, 0, 'h'},
@@ -41,7 +41,7 @@ void wisp_print_help(const char *progname)
 
 void wisp_print_version(void)
 {
-    WISP_LOGS("Wisp Interpreter version %s", WISP_VERSION);
+    printf("v%s\n", WISP_VERSION);
 }
 
 void wisp_cli_options_free(WispCLIOptions *opts)
