@@ -1,2 +1,2 @@
-/usr/bin/llvm-ar qc libparser.a CMakeFiles/parser.dir/parser.c.o
-/usr/bin/llvm-ranlib libparser.a
+/usr/bin/ar qc libparser.a CMakeFiles/parser.dir/parser.c.o
+/usr/bin/ranlib libparser.a

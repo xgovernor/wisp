@@ -22,11 +22,20 @@ typedef enum
     TOKEN_TYPEDEF,    /**< Type definition in parentheses */
     TOKEN_NUMBER,     /**< Numeric literal */
     TOKEN_STRING,     /**< String literal (template or quoted) */
+    TOKEN_TRUE,       /**< 'true' boolean literal */
+    TOKEN_FALSE,      /**< 'false' boolean literal */
     TOKEN_LBRACE,     /**< '{' character */
     TOKEN_RBRACE,     /**< '}' character */
     TOKEN_SEMICOLON,  /**< ';' character */
-    TOKEN_EOF,        /**< End of file/input */
-    TOKEN_ERROR       /**< Error or invalid token */
+    /* Comparison operators */
+    TOKEN_EQUAL_TO,      /**< 'equal to' */
+    TOKEN_NOT_EQUAL_TO,  /**< 'not equal to' */
+    TOKEN_GREATER_THAN,  /**< 'greater than' */
+    TOKEN_LESS_THAN,     /**< 'less than' */
+    TOKEN_GREATER_EQUAL, /**< 'greater or equal to' */
+    TOKEN_LESS_EQUAL,    /**< 'less or equal to' */
+    TOKEN_EOF,           /**< End of file/input */
+    TOKEN_ERROR          /**< Error or invalid token */
 } TokenType;
 
 /**

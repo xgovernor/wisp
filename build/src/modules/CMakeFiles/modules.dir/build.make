@@ -73,43 +73,43 @@ src/modules/CMakeFiles/modules.dir/import.c.o: src/modules/CMakeFiles/modules.di
 src/modules/CMakeFiles/modules.dir/import.c.o: /home/circuit0/Workshop/learnig/wisp/src/modules/import.c
 src/modules/CMakeFiles/modules.dir/import.c.o: src/modules/CMakeFiles/modules.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/modules/CMakeFiles/modules.dir/import.c.o"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/modules/CMakeFiles/modules.dir/import.c.o -MF CMakeFiles/modules.dir/import.c.o.d -o CMakeFiles/modules.dir/import.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/import.c
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/modules/CMakeFiles/modules.dir/import.c.o -MF CMakeFiles/modules.dir/import.c.o.d -o CMakeFiles/modules.dir/import.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/import.c
 
 src/modules/CMakeFiles/modules.dir/import.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/modules.dir/import.c.i"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/modules/import.c > CMakeFiles/modules.dir/import.c.i
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/modules/import.c > CMakeFiles/modules.dir/import.c.i
 
 src/modules/CMakeFiles/modules.dir/import.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/modules.dir/import.c.s"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/modules/import.c -o CMakeFiles/modules.dir/import.c.s
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/modules/import.c -o CMakeFiles/modules.dir/import.c.s
 
 src/modules/CMakeFiles/modules.dir/symbol_table.c.o: src/modules/CMakeFiles/modules.dir/flags.make
 src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c
 src/modules/CMakeFiles/modules.dir/symbol_table.c.o: src/modules/CMakeFiles/modules.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/modules/CMakeFiles/modules.dir/symbol_table.c.o"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/modules/CMakeFiles/modules.dir/symbol_table.c.o -MF CMakeFiles/modules.dir/symbol_table.c.o.d -o CMakeFiles/modules.dir/symbol_table.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/modules/CMakeFiles/modules.dir/symbol_table.c.o -MF CMakeFiles/modules.dir/symbol_table.c.o.d -o CMakeFiles/modules.dir/symbol_table.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c
 
 src/modules/CMakeFiles/modules.dir/symbol_table.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/modules.dir/symbol_table.c.i"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c > CMakeFiles/modules.dir/symbol_table.c.i
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c > CMakeFiles/modules.dir/symbol_table.c.i
 
 src/modules/CMakeFiles/modules.dir/symbol_table.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/modules.dir/symbol_table.c.s"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c -o CMakeFiles/modules.dir/symbol_table.c.s
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c -o CMakeFiles/modules.dir/symbol_table.c.s
 
 src/modules/CMakeFiles/modules.dir/cli.c.o: src/modules/CMakeFiles/modules.dir/flags.make
 src/modules/CMakeFiles/modules.dir/cli.c.o: /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c
 src/modules/CMakeFiles/modules.dir/cli.c.o: src/modules/CMakeFiles/modules.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/modules/CMakeFiles/modules.dir/cli.c.o"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/modules/CMakeFiles/modules.dir/cli.c.o -MF CMakeFiles/modules.dir/cli.c.o.d -o CMakeFiles/modules.dir/cli.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/modules/CMakeFiles/modules.dir/cli.c.o -MF CMakeFiles/modules.dir/cli.c.o.d -o CMakeFiles/modules.dir/cli.c.o -c /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c
 
 src/modules/CMakeFiles/modules.dir/cli.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/modules.dir/cli.c.i"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c > CMakeFiles/modules.dir/cli.c.i
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c > CMakeFiles/modules.dir/cli.c.i
 
 src/modules/CMakeFiles/modules.dir/cli.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/modules.dir/cli.c.s"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c -o CMakeFiles/modules.dir/cli.c.s
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/modules && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c -o CMakeFiles/modules.dir/cli.c.s
 
 # Object files for target modules
 modules_OBJECTS = \

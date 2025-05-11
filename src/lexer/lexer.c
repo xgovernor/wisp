@@ -21,6 +21,72 @@ Token *get_next_token(const char *source)
         input = source;
         position = 0;
     }
+    // Boolean literals
+    if (strncmp(&input[position], "true", 4) == 0 && (input[position + 4] == ' ' || input[position + 4] == ';' || input[position + 4] == '\0'))
+    {
+        position += 4;
+        Token *token = malloc(sizeof(Token));
+        token->type = TOKEN_TRUE;
+        token->value = NULL;
+        return token;
+    }
+    if (strncmp(&input[position], "false", 5) == 0 && (input[position + 5] == ' ' || input[position + 5] == ';' || input[position + 5] == '\0'))
+    {
+        position += 5;
+        Token *token = malloc(sizeof(Token));
+        token->type = TOKEN_FALSE;
+        token->value = NULL;
+        return token;
+    }
+    // Comparison operators (longest match first)
+    if (strncmp(&input[position], "greater or equal to", 19) == 0 && (input[position + 19] == ' ' || input[position + 19] == '\0'))
+    {
+        position += 19;
+        Token *token = malloc(sizeof(Token));
+        token->type = TOKEN_GREATER_EQUAL;
+        token->value = NULL;
+        return token;
+    }
+    if (strncmp(&input[position], "less or equal to", 16) == 0 && (input[position + 16] == ' ' || input[position + 16] == '\0'))
+    {
+        position += 16;
+        Token *token = malloc(sizeof(Token));
+        token->type = TOKEN_LESS_EQUAL;
+        token->value = NULL;
+        return token;
+    }
+    if (strncmp(&input[position], "not equal to", 12) == 0 && (input[position + 12] == ' ' || input[position + 12] == '\0'))
+    {
+        position += 12;
+        Token *token = malloc(sizeof(Token));
+        token->type = TOKEN_NOT_EQUAL_TO;
+        token->value = NULL;
+        return token;
+    }
+    if (strncmp(&input[position], "equal to", 8) == 0 && (input[position + 8] == ' ' || input[position + 8] == '\0'))
+    {
+        position += 8;
+        Token *token = malloc(sizeof(Token));
+        token->type = TOKEN_EQUAL_TO;
+        token->value = NULL;
+        return token;
+    }
+    if (strncmp(&input[position], "greater than", 12) == 0 && (input[position + 12] == ' ' || input[position + 12] == ';' || input[position + 12] == '\0'))
+    {
+        position += 12;
+        Token *token = malloc(sizeof(Token));
+        token->type = TOKEN_GREATER_THAN;
+        token->value = NULL;
+        return token;
+    }
+    if (strncmp(&input[position], "less than", 9) == 0 && (input[position + 9] == ' ' || input[position + 9] == ';' || input[position + 9] == '\0'))
+    {
+        position += 9;
+        Token *token = malloc(sizeof(Token));
+        token->type = TOKEN_LESS_THAN;
+        token->value = NULL;
+        return token;
+    }
     while (input[position] != '\0')
     {
         // Skip whitespace
@@ -28,6 +94,55 @@ Token *get_next_token(const char *source)
         {
             position++;
             continue;
+        }
+        // Multi-word comparison operators (must come before identifier check)
+        if (strncmp(&input[position], "greater or equal to", 19) == 0 && (input[position + 19] == ' ' || input[position + 19] == '\0'))
+        {
+            position += 19;
+            Token *token = malloc(sizeof(Token));
+            token->type = TOKEN_GREATER_EQUAL;
+            token->value = NULL;
+            return token;
+        }
+        if (strncmp(&input[position], "less or equal to", 16) == 0 && (input[position + 16] == ' ' || input[position + 16] == '\0'))
+        {
+            position += 16;
+            Token *token = malloc(sizeof(Token));
+            token->type = TOKEN_LESS_EQUAL;
+            token->value = NULL;
+            return token;
+        }
+        if (strncmp(&input[position], "not equal to", 12) == 0 && (input[position + 12] == ' ' || input[position + 12] == '\0'))
+        {
+            position += 12;
+            Token *token = malloc(sizeof(Token));
+            token->type = TOKEN_NOT_EQUAL_TO;
+            token->value = NULL;
+            return token;
+        }
+        if (strncmp(&input[position], "equal to", 8) == 0 && (input[position + 8] == ' ' || input[position + 8] == '\0'))
+        {
+            position += 8;
+            Token *token = malloc(sizeof(Token));
+            token->type = TOKEN_EQUAL_TO;
+            token->value = NULL;
+            return token;
+        }
+        if (strncmp(&input[position], "greater than", 12) == 0 && (input[position + 12] == ' ' || input[position + 12] == ';' || input[position + 12] == '\0'))
+        {
+            position += 12;
+            Token *token = malloc(sizeof(Token));
+            token->type = TOKEN_GREATER_THAN;
+            token->value = NULL;
+            return token;
+        }
+        if (strncmp(&input[position], "less than", 9) == 0 && (input[position + 9] == ' ' || input[position + 9] == ';' || input[position + 9] == '\0'))
+        {
+            position += 9;
+            Token *token = malloc(sizeof(Token));
+            token->type = TOKEN_LESS_THAN;
+            token->value = NULL;
+            return token;
         }
         // Skip single-line comments (// ...)
         if (input[position] == '/' && input[position + 1] == '/')
