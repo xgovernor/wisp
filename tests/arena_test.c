@@ -24,7 +24,7 @@ int main(void) {
     assert(big != NULL);
 
     // Zero-size allocation (should not crash)
-    void *zero = arena_alloc(arena, 0);
+    arena_alloc(arena, 0);
     // Accept either NULL or valid pointer, but must not crash
 
     // Destroy fresh arena (no allocations)

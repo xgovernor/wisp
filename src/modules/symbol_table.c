@@ -93,7 +93,7 @@ void add_variable(const char *name, const char *type, const char *value, int is_
             // Strict type enforcement: types must match exactly
             if (strncmp(v->type, type, MAX_TYPE_LEN) != 0)
             {
-                WISP_LOGE("Type error: cannot assign value of type '%s' to variable '%s' of type '%s"", type, name, v->type);
+                WISP_LOGE("Type error: cannot assign value of type '%s' to variable '%s' of type '%s'", type, name, v->type);
                 return;
             }
             strncpy(v->value, value, MAX_VALUE_LEN - 1);
