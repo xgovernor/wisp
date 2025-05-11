@@ -181,8 +181,21 @@ int main(int argc, char **argv)
         getrusage(RUSAGE_SELF, &usage_end);
         clock_gettime(CLOCK_MONOTONIC, &t_end);
         double elapsed = (t_end.tv_sec - t_start.tv_sec) + (t_end.tv_nsec - t_start.tv_nsec) / 1e9;
+        double user_sec = (usage_end.ru_utime.tv_sec - usage_start.ru_utime.tv_sec) +
+                          (usage_end.ru_utime.tv_usec - usage_start.ru_utime.tv_usec) / 1e6;
+        double sys_sec = (usage_end.ru_stime.tv_sec - usage_start.ru_stime.tv_sec) +
+                         (usage_end.ru_stime.tv_usec - usage_start.ru_stime.tv_usec) / 1e6;
         long mem_kb = usage_end.ru_maxrss;
-        WISP_LOGS("[Stats] Time: %.6f sec | Max Memory: %ld KB", elapsed, mem_kb);
+        long page_faults = usage_end.ru_majflt;
+        long swaps = usage_end.ru_nswap;
+        fprintf(stderr, "\n=== Wisp Stats ===\n");
+        fprintf(stderr, "  Wall time   : %10.6f s\n", elapsed);
+        fprintf(stderr, "  User CPU    : %10.6f s\n", user_sec);
+        fprintf(stderr, "  System CPU  : %10.6f s\n", sys_sec);
+        fprintf(stderr, "  Max RSS     : %10ld KB\n", mem_kb);
+        fprintf(stderr, "  Page faults : %10ld\n", page_faults);
+        fprintf(stderr, "  Swaps       : %10ld\n", swaps);
+        fprintf(stderr,   "==================\n");
     }
     wisp_cli_options_free(&opts);
     symbol_table_cleanup();
