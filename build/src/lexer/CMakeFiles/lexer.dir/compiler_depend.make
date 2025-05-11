@@ -59,11 +59,15 @@ src/lexer/CMakeFiles/lexer.dir/lexer.c.o: /home/circuit0/Workshop/learnig/wisp/s
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdarg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stddef.h
 
 
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
+/usr/lib/llvm-19/lib/clang/19/include/stddef.h:
 
 /usr/include/alloca.h:
 
@@ -86,6 +90,8 @@ src/lexer/CMakeFiles/lexer.dir/lexer.c.o: /home/circuit0/Workshop/learnig/wisp/s
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
@@ -139,13 +145,15 @@ src/lexer/CMakeFiles/lexer.dir/lexer.c.o: /home/circuit0/Workshop/learnig/wisp/s
 
 /usr/include/string.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+/usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h:
+/usr/lib/llvm-19/lib/clang/19/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
@@ -175,6 +183,8 @@ src/lexer/CMakeFiles/lexer.dir/lexer.c.o: /home/circuit0/Workshop/learnig/wisp/s
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h:
+
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
@@ -182,3 +192,5 @@ src/lexer/CMakeFiles/lexer.dir/lexer.c.o: /home/circuit0/Workshop/learnig/wisp/s
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h:

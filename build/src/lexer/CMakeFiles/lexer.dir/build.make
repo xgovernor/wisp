@@ -73,15 +73,15 @@ src/lexer/CMakeFiles/lexer.dir/lexer.c.o: src/lexer/CMakeFiles/lexer.dir/flags.m
 src/lexer/CMakeFiles/lexer.dir/lexer.c.o: /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c
 src/lexer/CMakeFiles/lexer.dir/lexer.c.o: src/lexer/CMakeFiles/lexer.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/lexer/CMakeFiles/lexer.dir/lexer.c.o"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/lexer && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/lexer/CMakeFiles/lexer.dir/lexer.c.o -MF CMakeFiles/lexer.dir/lexer.c.o.d -o CMakeFiles/lexer.dir/lexer.c.o -c /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/lexer && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/lexer/CMakeFiles/lexer.dir/lexer.c.o -MF CMakeFiles/lexer.dir/lexer.c.o.d -o CMakeFiles/lexer.dir/lexer.c.o -c /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c
 
 src/lexer/CMakeFiles/lexer.dir/lexer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/lexer.dir/lexer.c.i"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/lexer && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c > CMakeFiles/lexer.dir/lexer.c.i
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/lexer && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c > CMakeFiles/lexer.dir/lexer.c.i
 
 src/lexer/CMakeFiles/lexer.dir/lexer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/lexer.dir/lexer.c.s"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/lexer && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c -o CMakeFiles/lexer.dir/lexer.c.s
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/lexer && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/lexer/lexer.c -o CMakeFiles/lexer.dir/lexer.c.s
 
 # Object files for target lexer
 lexer_OBJECTS = \

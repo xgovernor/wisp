@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include "interpreter.h"
+#include "logger.h"
 #include "../lexer/lexer.h" // Use the lexer.h with comparison tokens
 #include "symbol_table.h"
 #include "../utils/utils.h"
@@ -53,7 +54,7 @@ int wisp_interpret(const char *source, const char *filename)
     (void)filename; // Mark unused for now
     if (!source)
     {
-        WISP_ERROR("No source code provided to interpreter.");
+        WISP_LOGE("No source code provided to interpreter.");
         return 1;
     }
     int first = 1;

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../utils/intern.h"
+#include "logger.h"
 
 #define SYMBOL_TABLE_SIZE 211
 static Variable *symbol_table[SYMBOL_TABLE_SIZE];
@@ -73,7 +74,10 @@ Variable *find_variable(const char *name) {
 
 void add_variable(const char *name, const char *type, const char *value, int is_constant) {
     if (!name)
+    {
+        WISP_LOGE("Attempted to add variable with NULL name.");
         return;
+    }
     const char *iname = intern_string(name);
     unsigned long h = hash_varname(iname);
     Variable *v = symbol_table[h];
@@ -83,7 +87,7 @@ void add_variable(const char *name, const char *type, const char *value, int is_
         {
             if (v->is_constant)
             {
-                fprintf(stderr, "\033[31mCannot reassign to constant variable: %s\033[0m\n", name);
+                WISP_LOGE("Cannot reassign to constant variable: %s", name);
                 return;
             }
             strncpy(v->type, type, MAX_TYPE_LEN - 1);

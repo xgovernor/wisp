@@ -200,12 +200,12 @@ CMakeFiles/wisp.dir/all: src/runtime/CMakeFiles/runtime.dir/all
 CMakeFiles/wisp.dir/all: src/modules/CMakeFiles/modules.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wisp.dir/build.make CMakeFiles/wisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=18,19,20,21 "Built target wisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=19,20,21,22 "Built target wisp"
 .PHONY : CMakeFiles/wisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/wisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/wisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
 .PHONY : CMakeFiles/wisp.dir/rule
@@ -408,7 +408,7 @@ CMakeFiles/deb.dir/clean:
 src/utils/CMakeFiles/utils.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=14,15,16,17 "Built target utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=15,16,17,18 "Built target utils"
 .PHONY : src/utils/CMakeFiles/utils.dir/all
 
 # Build rule for subdir invocation for target.
@@ -460,7 +460,7 @@ src/lexer/CMakeFiles/lexer.dir/clean:
 src/parser/CMakeFiles/parser.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/parser/CMakeFiles/parser.dir/build.make src/parser/CMakeFiles/parser.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/parser/CMakeFiles/parser.dir/build.make src/parser/CMakeFiles/parser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=10,11 "Built target parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=11,12 "Built target parser"
 .PHONY : src/parser/CMakeFiles/parser.dir/all
 
 # Build rule for subdir invocation for target.
@@ -512,7 +512,7 @@ src/codegen/CMakeFiles/codegen.dir/clean:
 src/runtime/CMakeFiles/runtime.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/runtime/CMakeFiles/runtime.dir/build.make src/runtime/CMakeFiles/runtime.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/runtime/CMakeFiles/runtime.dir/build.make src/runtime/CMakeFiles/runtime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=12,13 "Built target runtime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=13,14 "Built target runtime"
 .PHONY : src/runtime/CMakeFiles/runtime.dir/all
 
 # Build rule for subdir invocation for target.
@@ -538,12 +538,12 @@ src/runtime/CMakeFiles/runtime.dir/clean:
 src/modules/CMakeFiles/modules.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=6,7,8,9 "Built target modules"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target modules"
 .PHONY : src/modules/CMakeFiles/modules.dir/all
 
 # Build rule for subdir invocation for target.
 src/modules/CMakeFiles/modules.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/modules/CMakeFiles/modules.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/circuit0/Workshop/learnig/wisp/build/CMakeFiles 0
 .PHONY : src/modules/CMakeFiles/modules.dir/rule

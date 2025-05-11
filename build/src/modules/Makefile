@@ -223,6 +223,30 @@ import.c.s:
 	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/import.c.s
 .PHONY : import.c.s
 
+logger.o: logger.c.o
+.PHONY : logger.o
+
+# target to build an object file
+logger.c.o:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/logger.c.o
+.PHONY : logger.c.o
+
+logger.i: logger.c.i
+.PHONY : logger.i
+
+# target to preprocess a source file
+logger.c.i:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/logger.c.i
+.PHONY : logger.c.i
+
+logger.s: logger.c.s
+.PHONY : logger.s
+
+# target to generate assembly for a file
+logger.c.s:
+	cd /home/circuit0/Workshop/learnig/wisp/build && $(MAKE) $(MAKESILENT) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/logger.c.s
+.PHONY : logger.c.s
+
 symbol_table.o: symbol_table.c.o
 .PHONY : symbol_table.o
 
@@ -266,6 +290,9 @@ help:
 	@echo "... import.o"
 	@echo "... import.i"
 	@echo "... import.s"
+	@echo "... logger.o"
+	@echo "... logger.i"
+	@echo "... logger.s"
 	@echo "... symbol_table.o"
 	@echo "... symbol_table.i"
 	@echo "... symbol_table.s"

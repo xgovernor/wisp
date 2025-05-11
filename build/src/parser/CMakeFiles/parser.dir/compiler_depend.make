@@ -59,11 +59,15 @@ src/parser/CMakeFiles/parser.dir/parser.c.o: /home/circuit0/Workshop/learnig/wis
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdarg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stddef.h
 
 
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
+/usr/lib/llvm-19/lib/clang/19/include/stddef.h:
 
 /usr/include/alloca.h:
 
@@ -78,6 +82,8 @@ src/parser/CMakeFiles/parser.dir/parser.c.o: /home/circuit0/Workshop/learnig/wis
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
@@ -135,19 +141,21 @@ src/parser/CMakeFiles/parser.dir/parser.c.o: /home/circuit0/Workshop/learnig/wis
 
 /usr/include/string.h:
 
+/usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h:
+
 /home/circuit0/Workshop/learnig/wisp/src/parser/parser.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /home/circuit0/Workshop/learnig/wisp/src/parser/parser.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h:
 
 /usr/include/stdio.h:
 
@@ -175,6 +183,8 @@ src/parser/CMakeFiles/parser.dir/parser.c.o: /home/circuit0/Workshop/learnig/wis
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h:
+
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
@@ -182,3 +192,5 @@ src/parser/CMakeFiles/parser.dir/parser.c.o: /home/circuit0/Workshop/learnig/wis
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h:

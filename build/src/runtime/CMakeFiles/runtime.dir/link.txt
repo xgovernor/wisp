@@ -1,2 +1,2 @@
-/usr/bin/ar qc libruntime.a CMakeFiles/runtime.dir/runtime.c.o
-/usr/bin/ranlib libruntime.a
+/usr/bin/llvm-ar qc libruntime.a CMakeFiles/runtime.dir/runtime.c.o
+/usr/bin/llvm-ranlib libruntime.a

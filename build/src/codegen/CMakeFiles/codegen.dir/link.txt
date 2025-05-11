@@ -1,2 +1,2 @@
-/usr/bin/ar qc libcodegen.a CMakeFiles/codegen.dir/codegen.c.o
-/usr/bin/ranlib libcodegen.a
+/usr/bin/llvm-ar qc libcodegen.a CMakeFiles/codegen.dir/codegen.c.o
+/usr/bin/llvm-ranlib libcodegen.a

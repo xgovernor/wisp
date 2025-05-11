@@ -73,15 +73,15 @@ src/runtime/CMakeFiles/runtime.dir/runtime.c.o: src/runtime/CMakeFiles/runtime.d
 src/runtime/CMakeFiles/runtime.dir/runtime.c.o: /home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c
 src/runtime/CMakeFiles/runtime.dir/runtime.c.o: src/runtime/CMakeFiles/runtime.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/circuit0/Workshop/learnig/wisp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/runtime/CMakeFiles/runtime.dir/runtime.c.o"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/runtime && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/runtime/CMakeFiles/runtime.dir/runtime.c.o -MF CMakeFiles/runtime.dir/runtime.c.o.d -o CMakeFiles/runtime.dir/runtime.c.o -c /home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/runtime && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/runtime/CMakeFiles/runtime.dir/runtime.c.o -MF CMakeFiles/runtime.dir/runtime.c.o.d -o CMakeFiles/runtime.dir/runtime.c.o -c /home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c
 
 src/runtime/CMakeFiles/runtime.dir/runtime.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/runtime.dir/runtime.c.i"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/runtime && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c > CMakeFiles/runtime.dir/runtime.c.i
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/runtime && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c > CMakeFiles/runtime.dir/runtime.c.i
 
 src/runtime/CMakeFiles/runtime.dir/runtime.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/runtime.dir/runtime.c.s"
-	cd /home/circuit0/Workshop/learnig/wisp/build/src/runtime && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c -o CMakeFiles/runtime.dir/runtime.c.s
+	cd /home/circuit0/Workshop/learnig/wisp/build/src/runtime && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/circuit0/Workshop/learnig/wisp/src/runtime/runtime.c -o CMakeFiles/runtime.dir/runtime.c.s
 
 # Object files for target runtime
 runtime_OBJECTS = \

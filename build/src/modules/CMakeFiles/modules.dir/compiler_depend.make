@@ -3,6 +3,7 @@
 
 src/modules/CMakeFiles/modules.dir/cli.c.o: /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c \
   /home/circuit0/Workshop/learnig/wisp/src/modules/cli.h \
+  /home/circuit0/Workshop/learnig/wisp/src/modules/logger.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \
@@ -62,9 +63,18 @@ src/modules/CMakeFiles/modules.dir/cli.c.o: /home/circuit0/Workshop/learnig/wisp
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg___va_copy.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_header_macro.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_arg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_copy.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_list.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdarg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdbool.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stddef.h
 
 src/modules/CMakeFiles/modules.dir/import.c.o: /home/circuit0/Workshop/learnig/wisp/src/modules/import.c \
   /home/circuit0/Workshop/learnig/wisp/src/modules/import.h \
@@ -124,11 +134,66 @@ src/modules/CMakeFiles/modules.dir/import.c.o: /home/circuit0/Workshop/learnig/w
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdarg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stddef.h
+
+src/modules/CMakeFiles/modules.dir/logger.c.o: /home/circuit0/Workshop/learnig/wisp/src/modules/logger.c \
+  /home/circuit0/Workshop/learnig/wisp/src/modules/logger.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg___va_copy.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_header_macro.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_arg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_copy.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_list.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdarg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stddef.h
 
 src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c \
   /home/circuit0/Workshop/learnig/wisp/src/utils/intern.h \
+  /home/circuit0/Workshop/learnig/wisp/src/modules/logger.h \
   /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
@@ -186,19 +251,46 @@ src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/lea
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg___va_copy.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_header_macro.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_arg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_copy.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_list.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stdarg.h \
+  /usr/lib/llvm-19/lib/clang/19/include/stddef.h
 
 
 /home/circuit0/Workshop/learnig/wisp/src/modules/symbol_table.c:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/time.h:
+
+/home/circuit0/Workshop/learnig/wisp/src/modules/logger.c:
 
 /home/circuit0/Workshop/learnig/wisp/src/modules/import.h:
 
 /home/circuit0/Workshop/learnig/wisp/src/modules/import.c:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
+/usr/lib/llvm-19/lib/clang/19/include/stddef.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h:
+/usr/lib/llvm-19/lib/clang/19/include/stdbool.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_list.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_copy.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stdarg_va_arg.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stdarg___va_copy.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stdarg___gnuc_va_list.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -208,9 +300,13 @@ src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/lea
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h:
+
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_ext.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stddef_wchar_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
@@ -222,6 +318,10 @@ src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/lea
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
 /home/circuit0/Workshop/learnig/wisp/src/modules/cli.c:
 
 /home/circuit0/Workshop/learnig/wisp/src/modules/cli.h:
@@ -230,7 +330,21 @@ src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/lea
 
 /usr/include/features.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/home/circuit0/Workshop/learnig/wisp/src/modules/logger.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
@@ -250,20 +364,6 @@ src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/lea
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -271,6 +371,8 @@ src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/lea
 /usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/__stdarg_header_macro.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -284,17 +386,25 @@ src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/lea
 
 /usr/include/string.h:
 
+/usr/lib/llvm-19/lib/clang/19/include/__stddef_size_t.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h:
-
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/lib/llvm-19/lib/clang/19/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/home/circuit0/Workshop/learnig/wisp/src/utils/intern.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/stdio.h:
 
@@ -309,12 +419,6 @@ src/modules/CMakeFiles/modules.dir/symbol_table.c.o: /home/circuit0/Workshop/lea
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/home/circuit0/Workshop/learnig/wisp/src/utils/intern.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 

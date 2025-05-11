@@ -1,10 +1,11 @@
 #include "./cli.h"
+#include "logger.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <getopt.h>
 
-#define WISP_VERSION "0.3.0"
+#define WISP_VERSION "0.3.1"
 
 static const struct option long_options[] = {
     {"help", no_argument, 0, 'h'},
@@ -21,26 +22,26 @@ static const struct option long_options[] = {
 
 void wisp_print_help(const char *progname)
 {
-    printf("Usage: %s [options] <script> [-- [script arguments]]\n", progname);
-    puts("\nOptions:");
-    puts("  -h, --help           Show this help message and exit");
-    puts("  -v, --version        Show version information and exit");
-    puts("  -s, --stats          Show execution time and memory usage");
-    puts("  -I, --include <dir>  Add directory to module search path (can be repeated)");
-    puts("  -c, --command <code> Execute code passed in as a string");
-    puts("  -e, --eval           Enter interactive mode (REPL)");
-    puts("  -o, --output <file>  Write output to file instead of stdout");
-    puts("      --no-color       Disable colored output");
-    puts("      --strict         Enable strict mode (fail on warnings)");
-    puts("      --debug          Enable debug output");
-    puts("\nArguments:");
-    puts("  <script>             Script file to execute");
-    puts("  --                   End of options; following are script arguments");
+    WISP_LOGS("Usage: %s [options] <script> [-- [script arguments]]", progname);
+    WISP_LOGI("\nOptions:");
+    WISP_LOGI("  -h, --help           Show this help message and exit");
+    WISP_LOGI("  -v, --version        Show version information and exit");
+    WISP_LOGI("  -s, --stats          Show execution time and memory usage");
+    WISP_LOGI("  -I, --include <dir>  Add directory to module search path (can be repeated)");
+    WISP_LOGI("  -c, --command <code> Execute code passed in as a string");
+    WISP_LOGI("  -e, --eval           Enter interactive mode (REPL)");
+    WISP_LOGI("  -o, --output <file>  Write output to file instead of stdout");
+    WISP_LOGI("      --no-color       Disable colored output");
+    WISP_LOGI("      --strict         Enable strict mode (fail on warnings)");
+    WISP_LOGI("      --debug          Enable debug output");
+    WISP_LOGI("\nArguments:");
+    WISP_LOGI("  <script>             Script file to execute");
+    WISP_LOGI("  --                   End of options; following are script arguments");
 }
 
 void wisp_print_version(void)
 {
-    puts("Wisp Interpreter version " WISP_VERSION);
+    WISP_LOGS("Wisp Interpreter version %s", WISP_VERSION);
 }
 
 void wisp_cli_options_free(WispCLIOptions *opts)
