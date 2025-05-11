@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -41,6 +40,28 @@ static int eval_comparison(TokenType op, const char *left, const char *right)
         return 0;
     }
 }
+
+#define MAX_INCLUDE_PATHS 32
+static char *include_paths[MAX_INCLUDE_PATHS];
+static int include_path_count = 0;
+
+void wisp_add_include_path(const char *path)
+{
+    if (include_path_count < MAX_INCLUDE_PATHS)
+    {
+        include_paths[include_path_count++] = strdup(path);
+    }
+}
+
+// Optionally, expose a getter for the include paths if needed by interpreter logic
+const char *wisp_get_include_path(int idx)
+{
+    if (idx < 0 || idx >= include_path_count)
+        return NULL;
+    return include_paths[idx];
+}
+int wisp_get_include_path_count(void) { return include_path_count; }
+
 #include "interpreter.h"
 #include <stdio.h>
 #include <string.h>

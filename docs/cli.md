@@ -36,7 +36,7 @@ wisp [options] <script> [-- [script arguments]]
   ```
   Example:
   ```
-  v0.3.3
+  v0.3.6
   ```
 
 ## Command Execution

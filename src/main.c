@@ -1,7 +1,7 @@
 // Wisp Interpreter main entry point
 #define _POSIX_C_SOURCE 200809L
 #define WISP_NAME "Wisp"
-#define WISP_VERSION "0.3.3"
+#define WISP_VERSION "0.3.6"
 // #define WISP_AUTHOR "Abu Taher Muhammad"
 #include <errno.h>
 /**
@@ -72,6 +72,17 @@ int main(int argc, char **argv)
         WISP_LOGE("Usage: %s [options] <script> [-- [script arguments]]", argv[0]);
         wisp_cli_options_free(&opts);
         return 1;
+    }
+
+    // Handle include paths: print and register them
+    if (opts.include_dir_count > 0)
+    {
+        fprintf(stderr, "[wisp] Include paths:\n");
+        for (int i = 0; i < opts.include_dir_count; ++i)
+        {
+            fprintf(stderr, "  %s\n", opts.include_dirs[i]);
+            wisp_add_include_path(opts.include_dirs[i]);
+        }
     }
 
     // Handle -c/--command (execute code string)

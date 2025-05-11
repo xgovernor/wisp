@@ -5,7 +5,7 @@
 #include <string.h>
 #include <getopt.h>
 
-#define WISP_VERSION "0.3.3"
+#define WISP_VERSION "0.3.6"
 
 static const struct option long_options[] = {
     {"help", no_argument, 0, 'h'},

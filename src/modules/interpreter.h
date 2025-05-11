@@ -13,4 +13,20 @@
  */
 int wisp_interpret(const char *source, const char *filename);
 
+/**
+ * @brief Register an include path for module search.
+ * @param path Directory path to add to the include search list.
+ */
+void wisp_add_include_path(const char *path);
+
+/**
+ * @brief Get the number of registered include paths.
+ */
+int wisp_get_include_path_count(void);
+
+/**
+ * @brief Get the include path at the given index (or NULL if out of range).
+ */
+const char *wisp_get_include_path(int idx);
+
 #endif // WISP_INTERPRETER_H
