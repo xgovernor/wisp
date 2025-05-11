@@ -5,7 +5,7 @@
 #include <string.h>
 #include <getopt.h>
 
-#define WISP_VERSION "0.3.2"
+#define WISP_VERSION "0.3.3"
 
 static const struct option long_options[] = {
     {"help", no_argument, 0, 'h'},
@@ -22,21 +22,26 @@ static const struct option long_options[] = {
 
 void wisp_print_help(const char *progname)
 {
-    WISP_LOGS("Usage: %s [options] <script> [-- [script arguments]]", progname);
-    WISP_LOGI("\nOptions:");
-    WISP_LOGI("  -h, --help           Show this help message and exit");
-    WISP_LOGI("  -v, --version        Show version information and exit");
-    WISP_LOGI("  -s, --stats          Show execution time and memory usage");
-    WISP_LOGI("  -I, --include <dir>  Add directory to module search path (can be repeated)");
-    WISP_LOGI("  -c, --command <code> Execute code passed in as a string");
-    WISP_LOGI("  -e, --eval           Enter interactive mode (REPL)");
-    WISP_LOGI("  -o, --output <file>  Write output to file instead of stdout");
-    WISP_LOGI("      --no-color       Disable colored output");
-    WISP_LOGI("      --strict         Enable strict mode (fail on warnings)");
-    WISP_LOGI("      --debug          Enable debug output");
-    WISP_LOGI("\nArguments:");
-    WISP_LOGI("  <script>             Script file to execute");
-    WISP_LOGI("  --                   End of options; following are script arguments");
+    printf("Wisp Interpreter v%s\n", WISP_VERSION);
+    printf("Usage: %s [options] <script.wisp> [-- [script arguments]]\n", progname);
+    printf("\nOptions:\n");
+    printf("  -h, --help           Show this help message and exit\n");
+    printf("  -v, --version        Show version in 'v<version>' format and exit\n");
+    printf("  -s, --stats          Show execution time and memory usage\n");
+    printf("  -I, --include <dir>  Add directory to module search path (repeatable)\n");
+    printf("  -c, --command <code> Execute code string directly (quote for shell, supports multiple statements)\n");
+    printf("  -e, --eval           Enter interactive mode (REPL)\n");
+    printf("  -o, --output <file>  Write output to file instead of stdout\n");
+    printf("      --no-color       Disable colored output\n");
+    printf("      --strict         Enable strict mode (fail on warnings)\n");
+    printf("      --debug          Enable debug output\n");
+    printf("\nArguments:\n");
+    printf("  <script.wisp>        Script file to execute (must end with .wisp)\n");
+    printf("  --                   End of options; following are script arguments\n");
+    printf("\nExamples:\n");
+    printf("  %s myprog.wisp\n", progname);
+    printf("  %s -c 'show `Hello!`; show 1 < 2;'\n", progname);
+    printf("  %s -I modules/ myprog.wisp -- arg1 arg2\n", progname);
 }
 
 void wisp_print_version(void)

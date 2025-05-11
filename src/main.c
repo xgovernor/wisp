@@ -1,7 +1,7 @@
 // Wisp Interpreter main entry point
 #define _POSIX_C_SOURCE 200809L
 #define WISP_NAME "Wisp"
-#define WISP_VERSION "0.3.2"
+#define WISP_VERSION "0.3.3"
 // #define WISP_AUTHOR "Abu Taher Muhammad"
 #include <errno.h>
 /**
@@ -78,11 +78,14 @@ int main(int argc, char **argv)
 
     if (opts.command)
     {
-        // TODO: interpret code in opts.command
-        WISP_LOGI("[Stub] Would execute: %s", opts.command);
+        int interp_result = wisp_interpret(opts.command, "<command>");
+        if (interp_result != 0)
+        {
+            fprintf(stderr, "wisp: error: failed to execute command string\n");
+        }
         wisp_cli_options_free(&opts);
         symbol_table_cleanup();
-        return 0;
+        return interp_result;
     }
 
     // Handle -e/--eval (REPL)
